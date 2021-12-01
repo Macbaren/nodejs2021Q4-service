@@ -2,7 +2,7 @@
 GET http://localhost:4000/users HTTP/1.1
 
 ### get single user
-GET http://localhost:4000/users/3 HTTP/1.1
+GET http://localhost:4000/users/570d94f6-278b-41c2-9e48-e8cb94165e95 HTTP/1.1
 
 ### add user
 POST http://localhost:4000/users HTTP/1.1
@@ -15,14 +15,14 @@ Content-Type: application/json
 }
 
 ### delete user
-DELETE http://localhost:4000/users/2 HTTP/1.1
+DELETE http://localhost:4000/users/801cdcb1-a19f-4054-8bea-11a55741e190 HTTP/1.1
 
 ### update user
-PUT http://localhost:4000/users/440039ec-d2c7-4b9b-b910-bd271e9e56b7 HTTP/1.1
+PUT http://localhost:4000/users/c9c6ee8d-45ab-4d4f-96fc-62ee0afaa09e HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Andrey 3",
+  "id": "123",
   "login": "Macbaren 2",
   "password": "123457890"
 }

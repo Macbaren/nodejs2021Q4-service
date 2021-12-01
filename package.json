@@ -49,6 +49,7 @@
     "fastify": "^3.24.1",
     "fastify-swagger": "^4.12.6",
     "uuid": "8.3.2",
+    "uuid-validate": "^0.0.3",
     "yamljs": "0.3.0"
   },
   "devDependencies": {
