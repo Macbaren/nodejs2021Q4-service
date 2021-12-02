@@ -58,7 +58,7 @@ const postUserOps = {
   handler: addUser,
 };
 
-// Options for single user
+// Options for deleting user
 const deleteUserOps = {
   schema: {
     response: {

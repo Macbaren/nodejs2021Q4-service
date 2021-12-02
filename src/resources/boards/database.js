@@ -1,16 +1,16 @@
 const boards = [
   {
-    id: '570d94f6-278b-41c2-9e48-e8cb94165e94',
+    id: 'ba2c0425-e192-44a2-8329-f309b14e4019',
     title: 'Board 1',
     columns: [],
   },
   {
-    id: '055b7383-7c80-45f2-b132-006781d129e4',
+    id: '371026a1-2e76-44a3-a699-c485b3c59cb2',
     title: 'Board 2',
     columns: [],
   },
   {
-    id: 'aff424e7-cd50-41c0-81e1-f29fa8d50a96',
+    id: 'a8407d83-82a2-47c1-8dd0-02f08e27447f',
     title: 'Board 3',
     columns: [],
   },
