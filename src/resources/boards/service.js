@@ -70,17 +70,11 @@ const updateBoard = (request, reply) => {
     reply.code(404).send({ message: `board with id: ${id} did not found` });
   }
 
-  const {
-    name = board.name,
-    login = board.login,
-    password = board.password,
-  } = request.body;
+  const { title = board.title, columns = board.columns } = request.body;
 
-  boards = boards.map((it) =>
-    it.id === id ? { id, name, login, password } : it
-  );
+  boards = boards.map((it) => (it.id === id ? { id, title, columns } : it));
 
-  reply.send(`board ${id} updated successfully`);
+  reply.send(board);
 };
 
 module.exports = {

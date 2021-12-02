@@ -5,16 +5,20 @@ let users = require('./database');
 
 const findUser = (id) => users.find((u) => u.id === id);
 
+const noPasswordUser = (user) => {
+  const npUser = JSON.parse(JSON.stringify(user));
+  delete npUser.password;
+  return npUser;
+};
+
+// GET method, api /users
 const getAllUsers = (request, reply) => {
-  const noPasswordUsers = users.map((user) => {
-    // eslint-disable-next-line no-param-reassign
-    delete user.password;
-    return user;
-  });
+  const noPasswordUsers = users.map((user) => noPasswordUser(user));
 
   reply.send(noPasswordUsers);
 };
 
+// GET method, api /users/:id
 const getUser = (request, reply) => {
   const { id } = request.params;
 
@@ -28,13 +32,10 @@ const getUser = (request, reply) => {
     reply.code(404).send({ message: `user with id: ${id} did not found` });
   }
 
-  const noPasswordUser = JSON.parse(JSON.stringify(user));
-
-  delete noPasswordUser.password;
-
-  reply.send(noPasswordUser);
+  reply.send(noPasswordUser(user));
 };
 
+// POST method, api /users
 const addUser = (request, reply) => {
   const { name, login, password } = request.body;
 
@@ -47,9 +48,10 @@ const addUser = (request, reply) => {
 
   users = [...users, user];
 
-  reply.code(201).send(user);
+  reply.code(201).send(noPasswordUser(user));
 };
 
+// DELETE method, api /users/:id
 const deleteUser = (request, reply) => {
   const { id } = request.params;
 
@@ -68,6 +70,7 @@ const deleteUser = (request, reply) => {
   reply.send({ message: `user ${id} deleted successfully` });
 };
 
+// PUT method, api /users/:id
 const updateUser = (request, reply) => {
   const { id } = request.params;
 
@@ -91,7 +94,7 @@ const updateUser = (request, reply) => {
     it.id === id ? { id, name, login, password } : it
   );
 
-  reply.send(`user ${id} updated successfully`);
+  reply.send(noPasswordUser(user));
 };
 
 module.exports = {

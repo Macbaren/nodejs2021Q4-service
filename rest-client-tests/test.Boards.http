@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
   "title": "Board 4",
-  "columns": "[]",
+  "columns": []
 }
 
 ### delete board
@@ -22,5 +22,5 @@ Content-Type: application/json
 
 {
     "title": "Board 5",
-    "columns": "[]",
+    "columns": []
 }

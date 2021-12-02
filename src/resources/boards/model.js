@@ -11,7 +11,7 @@ const Board = {
   properties: {
     id: { type: 'string' },
     title: { type: 'string' },
-    columns: { type: 'string' },
+    columns: { type: 'array' },
   },
 };
 
@@ -43,11 +43,10 @@ const postBoardOps = {
   schema: {
     body: {
       type: 'object',
-      required: ['id', 'title', 'columns'],
+      required: ['title', 'columns'],
       properties: {
-        id: { type: 'string' },
         title: { type: 'string' },
-        columns: { type: 'string' },
+        columns: { type: 'array' },
       },
     },
     response: {
