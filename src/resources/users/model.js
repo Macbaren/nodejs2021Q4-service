@@ -3,6 +3,7 @@ const {
   getUser,
   addUser,
   deleteUser,
+  unassignUser,
   updateUser,
 } = require('./service');
 // user schema
@@ -71,6 +72,7 @@ const deleteUserOps = {
     },
   },
   handler: deleteUser,
+  unassignUser,
 };
 
 // Options for updating user

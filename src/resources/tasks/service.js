@@ -3,22 +3,39 @@ const isUuid = require('uuid-validate');
 
 let tasks = require('./database');
 
-const findTask = (id) => tasks.find((u) => u.id === id);
+// helpers functions
+const findBoardTasks = (boardId) =>
+  tasks.filter((task) => task.boardId === boardId);
+
+const findTask = (boardId, id) =>
+  tasks.find((task) => task.boardId === boardId && task.id === id);
 
 // GET boards/:boardId/tasks - get all tasks
 const getAllTasks = (request, reply) => {
-  reply.send(tasks);
+  const { boardId } = request.params;
+
+  if (!isUuid(boardId)) {
+    reply.code(400).send({ message: 'id is not uuid format' });
+  }
+
+  const board = findBoardTasks(boardId);
+
+  if (board === undefined) {
+    reply.code(404).send({ message: `board with id: ${board} did not found` });
+  }
+
+  reply.send(board);
 };
 
 // GET boards/:boardId/tasks/:taskId - get the task by id
 const getTask = (request, reply) => {
-  const { id } = request.params;
+  const { id, boardId } = request.params;
 
-  if (!isUuid(id)) {
+  if (!isUuid(id) || !isUuid(boardId)) {
     reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const task = findTask(id);
+  const task = findTask(boardId, id);
 
   if (task === undefined) {
     reply.code(404).send({ message: `task with id: ${id} did not found` });
@@ -30,7 +47,13 @@ const getTask = (request, reply) => {
 // POST boards/:boardId/tasks - create task
 const addTask = (request, reply) => {
   const { boardId } = request.params;
-  const { title, order, description, userId, columnId } = request.body;
+  const {
+    title,
+    order,
+    description,
+    userId = uuidv4(),
+    columnId = uuidv4(),
+  } = request.body;
 
   const task = {
     id: uuidv4(),
@@ -49,19 +72,19 @@ const addTask = (request, reply) => {
 
 // DELETE boards/:boardId/tasks/:taskId - delete task
 const deleteTask = (request, reply) => {
-  const { id } = request.params;
+  const { id, boardId } = request.params;
 
-  if (!isUuid(id)) {
+  if (!isUuid(id) || !isUuid(boardId)) {
     reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const task = findTask(id);
+  const task = findTask(boardId, id);
 
   if (task === undefined) {
     reply.code(404).send({ message: `task with id: ${id} did not found` });
   }
 
-  tasks = tasks.filter((u) => u.id !== id);
+  tasks = tasks.filter((t) => t.id !== id);
 
   reply.send({ message: `task ${id} deleted successfully` });
 };
@@ -70,11 +93,11 @@ const deleteTask = (request, reply) => {
 const updateTask = (request, reply) => {
   const { id, boardId } = request.params;
 
-  if (!isUuid(id)) {
+  if (!isUuid(id) || !isUuid(boardId)) {
     reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const task = findTask(id);
+  const task = findTask(boardId, id);
 
   if (task === undefined) {
     reply.code(404).send({ message: `task with id: ${id} did not found` });

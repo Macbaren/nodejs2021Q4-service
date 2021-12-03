@@ -13,7 +13,7 @@ const Task = {
     id: { type: 'string' },
     title: { type: 'string' },
     description: { type: 'string' },
-    order: { type: 'string' },
+    order: { type: 'number' },
     userId: { type: 'string' },
     boardId: { type: 'string' },
     columnId: { type: 'string' },
@@ -48,12 +48,20 @@ const postTaskOps = {
   schema: {
     body: {
       type: 'object',
-      required: ['title', 'order', 'description', 'userId', 'columnId'],
+      required: [
+        'title',
+        'order',
+        'description',
+        'userId',
+        'boardId',
+        'columnId',
+      ],
       properties: {
         title: { type: 'string' },
         description: { type: 'string' },
-        order: { type: 'string' },
+        order: { type: 'number' },
         userId: { type: 'string' },
+        boardId: { type: 'string' },
         columnId: { type: 'string' },
       },
     },

@@ -2,6 +2,7 @@ const { v4: uuidv4 } = require('uuid');
 const isUuid = require('uuid-validate');
 
 let users = require('./database');
+let tasks = require('../tasks/database');
 
 const findUser = (id) => users.find((u) => u.id === id);
 
@@ -67,7 +68,29 @@ const deleteUser = (request, reply) => {
 
   users = users.filter((u) => u.id !== id);
 
+  tasks = tasks.map((t) => (t.userId === id ? { ...t, userId: null } : t));
+
   reply.send({ message: `user ${id} deleted successfully` });
+};
+
+const unassignUser = (request, reply) => {
+  const { id } = request.params;
+
+  if (!isUuid(id)) {
+    reply.code(400).send({ message: 'id is not uuid format' });
+  }
+
+  const user = findUser(id);
+
+  if (user === undefined) {
+    reply.code(404).send({ message: `user with id: ${id} did not found` });
+  }
+
+  tasks = tasks.map((t) => (t.userId === id ? { ...t, userId: null } : t));
+
+  reply
+    .code(201)
+    .send({ message: `users with id: ${id} unassigned successfully` });
 };
 
 // PUT method, api /users/:id
@@ -102,5 +125,6 @@ module.exports = {
   getUser,
   addUser,
   deleteUser,
+  unassignUser,
   updateUser,
 };
