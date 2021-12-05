@@ -1,0 +1,28 @@
+### get all users
+GET http://localhost:4000/users HTTP/1.1
+
+### get single user
+GET http://localhost:4000/users/c49391f4-436c-4ed9-a26c-e32fa7e72119 HTTP/1.1
+
+### add user
+POST http://localhost:4000/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Andrey 9",
+  "login": "Macbaren 9",
+  "password": "999"
+}
+
+### delete user
+DELETE http://localhost:4000/users/44dd8eca-f741-4977-ab88-adee842fa45e HTTP/1.1
+
+### update user
+PUT http://localhost:4000/users/570d94f6-278b-41c2-9e48-e8cb94165e95 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "123",
+  "login": "Macbaren 2",
+  "password": "123457890"
+}
