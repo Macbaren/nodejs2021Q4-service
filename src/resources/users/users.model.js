@@ -3,9 +3,8 @@ const {
   getUser,
   addUser,
   deleteUser,
-  unassignUser,
   updateUser,
-} = require('./service');
+} = require('./users.service');
 // user schema
 const User = {
   type: 'object',
@@ -71,8 +70,7 @@ const deleteUserOps = {
       },
     },
   },
-  handler: deleteUser,
-  unassignUser,
+  handler: deleteUser
 };
 
 // Options for updating user

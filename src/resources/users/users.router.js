@@ -4,20 +4,24 @@ const {
   postUserOps,
   deleteUserOps,
   updateUserOps,
-} = require('./model');
+} = require('./users.model');
 
 function usersRoutes(fastify, options, done) {
   // get all users
   fastify.get('/users', getAllUsersOps);
+  
   // get required user
-  fastify.get('/users/:id', getUserOps);
+  fastify.get('/users/:userId', getUserOps);
+  
   // add user
   fastify.post('/users', postUserOps);
-  // delete user
-  fastify.delete('/users/:id', deleteUserOps);
+  
   // update user
   fastify.put('/users/:id', updateUserOps);
-
+  
+  // delete user
+  fastify.delete('/users/:userId', deleteUserOps);
+  
   done();
 }
 
