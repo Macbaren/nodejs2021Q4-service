@@ -4,7 +4,7 @@ const {
   addTask,
   deleteTask,
   updateTask,
-} = require('./service');
+} = require('./tasks.service');
 
 // task schema
 const Task = {

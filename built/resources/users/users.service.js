@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteUser = exports.updateUser = exports.addUser = exports.getUser = exports.getAllUsers = void 0;
+const tasks_repository_1 = require("../tasks/tasks.repository");
 const { v4: uuidv4 } = require('uuid');
 const isUuid = require('uuid-validate');
 let { users } = require('./users.repository');
 const { getAll } = require('./users.repository');
-let tasks = require('../tasks/database');
 const findUser = (id) => users.find((u) => u.userId === id);
 const noPasswordUser = (user) => {
     const npUser = JSON.parse(JSON.stringify(user));
@@ -16,6 +17,7 @@ const getAllUsers = (request, reply) => {
     // const noPasswordUsers = users.map((user) => noPasswordUser(user));
     reply.send(getAll());
 };
+exports.getAllUsers = getAllUsers;
 // GET method, api /users/:userId
 const getUser = (request, reply) => {
     const { userId } = request.params;
@@ -28,6 +30,7 @@ const getUser = (request, reply) => {
     }
     reply.send(noPasswordUser(user));
 };
+exports.getUser = getUser;
 // POST method, api /users
 const addUser = (request, reply) => {
     const { name, login, password } = request.body;
@@ -40,6 +43,7 @@ const addUser = (request, reply) => {
     users = [...users, user];
     reply.code(201).send(noPasswordUser(user));
 };
+exports.addUser = addUser;
 // PUT method, api /users/:userId
 const updateUser = (request, reply) => {
     const { userId } = request.params;
@@ -54,6 +58,7 @@ const updateUser = (request, reply) => {
     users = users.map((it) => it.userId === userId ? { userId, name, login, password } : it);
     reply.send(noPasswordUser(user));
 };
+exports.updateUser = updateUser;
 // DELETE method, api /users/:userId
 const deleteUser = (request, reply) => {
     const { userId } = request.params;
@@ -65,13 +70,14 @@ const deleteUser = (request, reply) => {
         reply.code(404).send({ message: `user with userId: ${userId} did not found` });
     }
     users = users.filter((u) => u.userId !== userId);
-    // tasks = tasks.map((t: taskBody) => (t.userId === userId ? { ...t, userId: null } : t));
+    (0, tasks_repository_1.deleteUserFromTask)(userId);
     reply.send({ message: `user ${userId} deleted successfully` });
 };
-module.exports = {
-    getAllUsers,
-    getUser,
-    addUser,
-    deleteUser,
-    updateUser,
-};
+exports.deleteUser = deleteUser;
+// module.exports = {
+//   getAllUsers,
+//   getUser,
+//   addUser,
+//   deleteUser,
+//   updateUser,
+// };

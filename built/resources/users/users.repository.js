@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const users = [
 // {
 //   id: '44dd8eca-f741-4977-ab88-adee842fa45e',

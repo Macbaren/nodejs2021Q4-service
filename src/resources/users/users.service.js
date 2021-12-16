@@ -3,7 +3,7 @@ const isUuid = require('uuid-validate');
 
 let { users } = require('./users.repository');
 const { getAll } = require('./users.repository');
-let tasks = require('../tasks/database');
+let tasks = require('../tasks/tasks.repository');
 
 const findUser = (id) => users.find((u) => u.id === id);
 

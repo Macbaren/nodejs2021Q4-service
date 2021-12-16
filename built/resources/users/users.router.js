@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.usersRoutes = void 0;
 const { getAllUsersOps, getUserOps, postUserOps, deleteUserOps, updateUserOps, } = require('./users.model');
 function usersRoutes(fastify, done) {
     // get all users
@@ -14,4 +15,4 @@ function usersRoutes(fastify, done) {
     fastify.delete('/users/:userId', deleteUserOps);
     done();
 }
-module.exports = usersRoutes;
+exports.usersRoutes = usersRoutes;

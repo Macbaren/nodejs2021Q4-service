@@ -8,7 +8,7 @@ fastify.register(require('fastify-swagger'), {
   },
 });
 fastify.register(require('./resources/users/users.router'));
-fastify.register(require('./resources/boards/router'));
-fastify.register(require('./resources/tasks/router'));
+fastify.register(require('./resources/boards/boards.router'));
+fastify.register(require('./resources/tasks/tasks.router'));
 
 module.exports = fastify;

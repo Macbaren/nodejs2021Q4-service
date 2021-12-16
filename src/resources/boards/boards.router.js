@@ -4,20 +4,19 @@ const {
   postBoardOps,
   deleteBoardOps,
   updateBoardOps,
-} = require('./model');
+} = require('./boards.model');
 
 function boardsRoutes(fastify, options, done) {
   // get all boards
   fastify.get('/boards', getAllBoardsOps);
   // get required board
-  fastify.get('/boards/:id', getBoardOps);
+  fastify.get('/boards/:boardId', getBoardOps);
   // add board
-  fastify.post('/boards', postBoardOps);
-  // delete board
-  fastify.delete('/boards/:id', deleteBoardOps);
+  fastify.post('/boards', postBoardOps);  
   // update board
   fastify.put('/boards/:id', updateBoardOps);
-
+  // delete board
+  fastify.delete('/boards/:id', deleteBoardOps);
   done();
 }
 

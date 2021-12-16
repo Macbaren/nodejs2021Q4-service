@@ -8,11 +8,7 @@ const {
   updateUserOps,
 } = require('./users.model');
 
-interface userParams {
-  userId: string;
-}
-
-function usersRoutes(fastify: FastifyInstance, done: Function) {
+export function usersRoutes(fastify: FastifyInstance, done: Function) {
   // get all users
   fastify.get('/users', getAllUsersOps);
   
@@ -31,4 +27,3 @@ function usersRoutes(fastify: FastifyInstance, done: Function) {
   done();
 }
 
-module.exports = usersRoutes;

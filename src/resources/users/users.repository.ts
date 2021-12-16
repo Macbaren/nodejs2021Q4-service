@@ -1,6 +1,4 @@
-import {User} from './users.model'
-
-const users: {userId: string, name: string, login: string}[] = [
+const users: { userId: string, name: string, login: string}[] = [
   // {
   //   id: '44dd8eca-f741-4977-ab88-adee842fa45e',
   //   name: 'Andrey 1',

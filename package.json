@@ -9,8 +9,8 @@
   "description": "REST service starter for RS School",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js",
-    "build": "tsc -p tsconfig.json", 
+    "start": "nodemon src/server.jss",
+    "build": "tsc -p tsconfig.json",
     "lint": "eslint --ext .js,.ts --fix src/",
     "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/*.test.js\" --noStackTrace --runInBand",
     "test:auth": "cross-env DEBUG=rs:* TEST_MODE=auth jest --noStackTrace"
@@ -45,6 +45,8 @@
     ]
   },
   "dependencies": {
+    "@typescript-eslint/parser": "^5.7.0",
+    "babel-eslint": "^10.1.0",
     "cross-env": "7.0.3",
     "dotenv": "10.0.0",
     "fastify": "^3.24.1",
@@ -54,6 +56,7 @@
     "yamljs": "0.3.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
     "chai": "4.3.4",
     "debug": "4.3.2",
     "dirty-chai": "2.0.1",

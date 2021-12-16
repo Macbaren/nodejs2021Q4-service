@@ -4,7 +4,8 @@ const {
   addBoard,
   deleteBoard,
   updateBoard,
-} = require('./service');
+} = require('./boards.service');
+
 // board schema
 const Board = {
   type: 'object',

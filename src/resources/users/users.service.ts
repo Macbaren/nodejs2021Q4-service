@@ -1,19 +1,16 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 
+import {deleteUserFromTask} from '../tasks/tasks.repository';
+
 const { v4: uuidv4 } = require('uuid');
 const isUuid = require('uuid-validate');
 
-import {User} from './users.model'
 let { users } = require('./users.repository');
 const { getAll } = require('./users.repository');
-let tasks = require('../tasks/database');
 
 
 interface userParams {
   userId: string;
-  name: string;
-  login: string; 
-  password: string;
 }
 
 interface userBody {
@@ -30,8 +27,7 @@ type getUserRequest = FastifyRequest<{
 
 type addUserRequest = FastifyRequest<{
    Params: userParams,
-   Body: userBody,
- 
+   Body: userBody, 
 }>
 
 const findUser = (id: string) => users.find((u: userBody) => u.userId === id);
@@ -43,14 +39,14 @@ const noPasswordUser = (user: object) => {
 };
 
 // GET method, api /users
-const getAllUsers = (request: FastifyRequest, reply: FastifyReply) => {
+export const getAllUsers = (request: FastifyRequest, reply: FastifyReply) => {
   // const noPasswordUsers = users.map((user) => noPasswordUser(user));
 
   reply.send(getAll());
 };
 
 // GET method, api /users/:userId
-const getUser = (request: getUserRequest, reply: FastifyReply) => {
+export const getUser = (request: getUserRequest, reply: FastifyReply) => {
   const { userId } = request.params;
 
   if (!isUuid(userId)) {
@@ -67,7 +63,7 @@ const getUser = (request: getUserRequest, reply: FastifyReply) => {
 };
 
 // POST method, api /users
-const addUser = (request: addUserRequest, reply: FastifyReply) => {
+export const addUser = (request: addUserRequest, reply: FastifyReply) => {
   const { name, login, password } = request.body;
 
   const user = {
@@ -83,7 +79,7 @@ const addUser = (request: addUserRequest, reply: FastifyReply) => {
 };
 
 // PUT method, api /users/:userId
-const updateUser = (request: getUserRequest, reply: FastifyReply) => {
+export const updateUser = (request: getUserRequest, reply: FastifyReply) => {
   const { userId } = request.params;
 
   if (!isUuid(userId)) {
@@ -106,7 +102,7 @@ const updateUser = (request: getUserRequest, reply: FastifyReply) => {
 };
 
 // DELETE method, api /users/:userId
-const deleteUser = (request: getUserRequest, reply: FastifyReply) => {
+export const deleteUser = (request: getUserRequest, reply: FastifyReply) => {
   const { userId } = request.params;
 
   if (!isUuid(userId)) {
@@ -121,15 +117,15 @@ const deleteUser = (request: getUserRequest, reply: FastifyReply) => {
 
   users = users.filter((u: userBody) => u.userId !== userId);
 
-  // tasks = tasks.map((t: taskBody) => (t.userId === userId ? { ...t, userId: null } : t));
+  deleteUserFromTask(userId)
 
   reply.send({ message: `user ${userId} deleted successfully` });
 };
 
-module.exports = {
-  getAllUsers,
-  getUser,
-  addUser,
-  deleteUser,
-  updateUser,
-};
+// module.exports = {
+//   getAllUsers,
+//   getUser,
+//   addUser,
+//   deleteUser,
+//   updateUser,
+// };

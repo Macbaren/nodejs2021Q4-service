@@ -12,8 +12,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const { PORT } = require('./common/config');
 const app_1 = __importDefault(require("./app"));
+const { PORT } = require('./common/config');
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield app_1.default.listen(PORT);
