@@ -1,12 +1,12 @@
 import { FastifyInstance } from "fastify";
 
-const {
+import {
   getAllBoardsOps,
   getBoardOps,
   postBoardOps,
   deleteBoardOps,
   updateBoardOps,
-} = require('./boards.model');
+} from './boards.model';
 
 export function boardsRoutes(fastify: FastifyInstance, done: Function) {
   // get all boards

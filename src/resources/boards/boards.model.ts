@@ -1,10 +1,10 @@
-const {
+import {
   getAllBoards,
   getBoard,
   addBoard,
   deleteBoard,
   updateBoard,
-} = require('./boards.service');
+} from './boards.service';
 
 // board schema
 const Board = {
@@ -82,7 +82,7 @@ const updateBoardOps = {
   handler: updateBoard,
 };
 
-module.exports = {
+export {
   getAllBoardsOps,
   getBoardOps,
   postBoardOps,

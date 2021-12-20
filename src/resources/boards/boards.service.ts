@@ -109,7 +109,7 @@ const deleteBoard = (request: BoardRequest, reply: FastifyReply) => {
   reply.send({ message: `board ${boardId} deleted successfully` });
 };
 
-export = {
+export {
   getAllBoards,
   getBoard,
   addBoard,
