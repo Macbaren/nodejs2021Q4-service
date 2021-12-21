@@ -1,5 +1,7 @@
 "use strict";
-const { getAllBoards, getBoard, addBoard, deleteBoard, updateBoard, } = require('./service');
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.updateBoardOps = exports.deleteBoardOps = exports.postBoardOps = exports.getBoardOps = exports.getAllBoardsOps = void 0;
+const boards_service_1 = require("./boards.service");
 // board schema
 const Board = {
     type: 'object',
@@ -19,8 +21,9 @@ const getAllBoardsOps = {
             },
         },
     },
-    handler: getAllBoards,
+    handler: boards_service_1.getAllBoards,
 };
+exports.getAllBoardsOps = getAllBoardsOps;
 // Options for single board
 const getBoardOps = {
     schema: {
@@ -28,8 +31,9 @@ const getBoardOps = {
             200: Board,
         },
     },
-    handler: getBoard,
+    handler: boards_service_1.getBoard,
 };
+exports.getBoardOps = getBoardOps;
 // Options for adding board
 const postBoardOps = {
     schema: {
@@ -45,8 +49,9 @@ const postBoardOps = {
             201: Board,
         },
     },
-    handler: addBoard,
+    handler: boards_service_1.addBoard,
 };
+exports.postBoardOps = postBoardOps;
 // Options for single board
 const deleteBoardOps = {
     schema: {
@@ -59,8 +64,9 @@ const deleteBoardOps = {
             },
         },
     },
-    handler: deleteBoard,
+    handler: boards_service_1.deleteBoard,
 };
+exports.deleteBoardOps = deleteBoardOps;
 // Options for updating board
 const updateBoardOps = {
     schema: {
@@ -68,12 +74,6 @@ const updateBoardOps = {
             200: Board,
         },
     },
-    handler: updateBoard,
+    handler: boards_service_1.updateBoard,
 };
-module.exports = {
-    getAllBoardsOps,
-    getBoardOps,
-    postBoardOps,
-    deleteBoardOps,
-    updateBoardOps,
-};
+exports.updateBoardOps = updateBoardOps;

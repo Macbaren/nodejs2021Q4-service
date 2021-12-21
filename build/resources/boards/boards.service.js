@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.updateBoard = exports.deleteBoard = exports.addBoard = exports.getBoard = exports.getAllBoards = void 0;
 const { v4: uuidv4 } = require('uuid');
 const isUuid = require('uuid-validate');
 let boards = require('./boards.repository');
@@ -8,6 +10,7 @@ const findBoard = (id) => boards.find((b) => b.id === id);
 const getAllBoards = (request, reply) => {
     reply.send(boards);
 };
+exports.getAllBoards = getAllBoards;
 // GET /boards/:boardId - get the board by boardId
 const getBoard = (request, reply) => {
     const { boardId } = request.params;
@@ -20,6 +23,7 @@ const getBoard = (request, reply) => {
     }
     reply.send(board);
 };
+exports.getBoard = getBoard;
 // POST /boards - create board
 const addBoard = (request, reply) => {
     const { title, columns } = request.body;
@@ -31,6 +35,7 @@ const addBoard = (request, reply) => {
     boards = [...boards, board];
     reply.code(201).send(board);
 };
+exports.addBoard = addBoard;
 // PUT /boards/:boardId - update board
 const updateBoard = (request, reply) => {
     const { boardId } = request.params;
@@ -45,6 +50,7 @@ const updateBoard = (request, reply) => {
     boards = boards.map((b) => (b.id === boardId ? { boardId, title, columns } : b));
     reply.send(board);
 };
+exports.updateBoard = updateBoard;
 // DELETE /boards/:boardId - delete board
 const deleteBoard = (request, reply) => {
     const { boardId } = request.params;
@@ -59,10 +65,4 @@ const deleteBoard = (request, reply) => {
     tasks = tasks.filter((t) => t.boardId !== boardId);
     reply.send({ message: `board ${boardId} deleted successfully` });
 };
-module.exports = {
-    getAllBoards,
-    getBoard,
-    addBoard,
-    deleteBoard,
-    updateBoard,
-};
+exports.deleteBoard = deleteBoard;

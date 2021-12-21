@@ -1,7 +1,9 @@
 "use strict";
-const { getAllTasks, getTask, addTask, deleteTask, updateTask, } = require('./service');
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.updateTaskOps = exports.deleteTaskOps = exports.postTaskOps = exports.getTaskOps = exports.getAllTasksOps = exports.Task = void 0;
+const { getAllTasks, getTask, addTask, deleteTask, updateTask, } = require('./tasks.service');
 // task schema
-const Task = {
+exports.Task = {
     type: 'object',
     properties: {
         id: { type: 'string' },
@@ -14,28 +16,28 @@ const Task = {
     },
 };
 // Options for get all tasks
-const getAllTasksOps = {
+exports.getAllTasksOps = {
     schema: {
         response: {
             200: {
                 type: 'array',
-                tasks: Task,
+                tasks: exports.Task,
             },
         },
     },
     handler: getAllTasks,
 };
 // Options for single task
-const getTaskOps = {
+exports.getTaskOps = {
     schema: {
         response: {
-            200: Task,
+            200: exports.Task,
         },
     },
     handler: getTask,
 };
 // Options for adding task
-const postTaskOps = {
+exports.postTaskOps = {
     schema: {
         body: {
             type: 'object',
@@ -57,13 +59,13 @@ const postTaskOps = {
             },
         },
         response: {
-            201: Task,
+            201: exports.Task,
         },
     },
     handler: addTask,
 };
 // Options for single task
-const deleteTaskOps = {
+exports.deleteTaskOps = {
     schema: {
         response: {
             200: {
@@ -77,18 +79,18 @@ const deleteTaskOps = {
     handler: deleteTask,
 };
 // Options for updating task
-const updateTaskOps = {
+exports.updateTaskOps = {
     schema: {
         response: {
-            200: Task,
+            200: exports.Task,
         },
     },
     handler: updateTask,
 };
-module.exports = {
-    getAllTasksOps,
-    getTaskOps,
-    postTaskOps,
-    deleteTaskOps,
-    updateTaskOps,
-};
+// module.exports = {
+//   getAllTasksOps,
+//   getTaskOps,
+//   postTaskOps,
+//   deleteTaskOps,
+//   updateTaskOps,
+// };

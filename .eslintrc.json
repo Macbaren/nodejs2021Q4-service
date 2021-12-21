@@ -23,7 +23,7 @@
     },
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".ts"]
       },
       "typescript": {
         "alwaysTryTypes": true,
@@ -34,6 +34,7 @@
       "tryExtensions": [".js", ".ts"]
     }
   },
+  "plugins": ["@typescript-eslint", "eslint-plugin-tsdoc", "import"],
   "extends": [
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:import/recommended",
@@ -50,10 +51,6 @@
     "no-underscore-dangle": "off",
     "import/prefer-default-export": "off",
     "tsdoc/syntax": "error",
-    "@typescript-eslint/no-explicit-any": "error" 
-  },
-
-  "plugins": [
-    "@typescript-eslint", "eslint-plugin-tsdoc", "import"
-  ]
+    "@typescript-eslint/no-explicit-any": "error"
+  }
 }
