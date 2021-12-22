@@ -2,9 +2,9 @@ import { FastifyInstance, FastifyPluginOptions } from 'fastify';
 import {
   getAllUsersOps,
   getUserOps,
-  // postUserOps,
-  // deleteUserOps,
-  // updateUserOps,
+  postUserOps,
+  updateUserOps,
+  deleteUserOps,
 } from './users.model';
 
 export function usersRoutes(
@@ -17,11 +17,11 @@ export function usersRoutes(
   // get required user
   fastify.get('/users/:userId', getUserOps);
   // add user
-  // fastify.post('/users', postUserOps);
-  // // delete user
-  // fastify.delete('/users/:userId', deleteUserOps);
-  // // update user
-  // fastify.put('/users/:userId', updateUserOps);
+  fastify.post('/users', postUserOps);
+  // update user
+  fastify.put('/users/:userId', updateUserOps);
+  // delete user
+  fastify.delete('/users/:userId', deleteUserOps);
 
   done();
 }

@@ -1,4 +1,9 @@
-import { IUserResBody } from '../../common/interfaces';
+import {
+  IUserReqBody,
+  IUserReqParam,
+  IUserResBody,
+} from '../../common/interfaces';
+import { setUsersIdToNull } from '../tasks/tasks.repository';
 
 const users: IUserResBody[] = [
   // {
@@ -53,6 +58,36 @@ export const usersDbFunctions = {
   getAllUsers: async () => users,
 
   // GET method, api /users/:userId
-  getUser: async (userId: IUserResBody['id']) =>
-    users.find((user) => user.id === userId),
+  getUser: async (id: IUserResBody['id']) => {
+    const user = users.find((user) => user.id === id);
+    return user;
+  },
+
+  // POST method, api /users
+  addUser: async (newUser: IUserResBody) => {
+    users.push(newUser);
+  },
+
+  // PUT method, api /users/:userId
+  updateUser: async (id: IUserResBody['id'], user: IUserResBody) => {
+    const updUserIndex = users.findIndex((user) => user.id === id);
+
+    if (updUserIndex < 0) return null;
+
+    users[updUserIndex] = { ...user, id };
+
+    return { ...user, id };
+  },
+
+  deleteUser: async (id: IUserResBody['id']) => {
+    const delUserIndex = users.findIndex((user) => user.id === id);
+
+    if (delUserIndex < 0) return null;
+
+    setUsersIdToNull(id);
+
+    users.splice(delUserIndex, 1);
+
+    return delUserIndex;
+  },
 };

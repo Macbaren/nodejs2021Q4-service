@@ -2,14 +2,14 @@ import fastify, { FastifyRequest, FastifyReply } from 'fastify';
 import { fastifySwagger } from 'fastify-swagger';
 import * as path from 'path';
 import { usersRoutes } from './resources/users/users.router';
-// import { boardsRoutes } from './resources/boards/boards.router';
-// import { tasksRoutes } from './resources/tasks/task.router';
+import { boardsRoutes } from './resources/boards/boards.router';
+import { tasksRoutes } from './resources/tasks/tasks.router';
 
 export const server = fastify({ logger: true });
 
 server.register(usersRoutes);
-// server.register(boardsRoutes);
-// server.register(tasksRoutes);
+server.register(boardsRoutes);
+server.register(tasksRoutes);
 server.register(fastifySwagger, {
   exposeRoute: true,
   routePrefix: '/doc',

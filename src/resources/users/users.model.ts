@@ -3,9 +3,9 @@ import { v4 as uuid } from 'uuid';
 import {
   getAllUsers,
   getUser,
-  // addUser,
-  // deleteUser,
-  // updateUser,
+  addUser,
+  updateUser,
+  deleteUser,
 } from './users.service';
 
 export class User {
@@ -23,7 +23,7 @@ export class User {
    * @returns user object with id === uuid v4 IUserResBody.
    */
 
-  constructor({ name = 'USER', login = 'user', password = 'P@55w0rd' } = {}) {
+  constructor({ name = 'USER', login = 'user', password = 'admin' } = {}) {
     this.id = uuid();
     this.name = name;
     this.login = login;
@@ -75,39 +75,39 @@ export const getUserOps = {
   handler: getUser,
 };
 
-// // Options for adding user
-// export const postUserOps = {
-//   schema: {
-//     body: UserBody,
-//     response: {
-//       201: ResponseUser,
-//     },
-//   },
-//   handler: addUser,
-// };
+// Options for adding user
+export const postUserOps = {
+  schema: {
+    body: UserBody,
+    response: {
+      201: ResponseUser,
+    },
+  },
+  handler: addUser,
+};
 
-// // Options for updating user
-// export const updateUserOps = {
-//   schema: {
-//     body: UserBody,
-//     response: {
-//       200: ResponseUser,
-//     },
-//   },
-//   handler: updateUser,
-// };
+// Options for updating user
+export const updateUserOps = {
+  schema: {
+    body: UserBody,
+    response: {
+      200: ResponseUser,
+    },
+  },
+  handler: updateUser,
+};
 
-// // Options for deleting user
-// export const deleteUserOps = {
-//   schema: {
-//     response: {
-//       200: {
-//         type: 'object',
-//         properties: {
-//           message: { type: 'string' },
-//         },
-//       },
-//     },
-//   },
-//   handler: deleteUser,
-// };
+// Options for deleting user
+export const deleteUserOps = {
+  schema: {
+    response: {
+      200: {
+        type: 'object',
+        properties: {
+          message: { type: 'string' },
+        },
+      },
+    },
+  },
+  handler: deleteUser,
+};
