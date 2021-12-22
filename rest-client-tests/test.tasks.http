@@ -1,0 +1,32 @@
+### get all tasks
+GET http://localhost:4000/boards/ba2c0425-e192-44a2-8329-f309b14e4019/tasks HTTP/1.1
+
+### get single task
+GET http://localhost:4000/boards/ba2c0425-e192-44a2-8329-f309b14e4019/tasks/79e8cb6f-4e75-42ad-83c3-cd1f190745c8 HTTP/1.1
+
+### add task
+POST http://localhost:4000/boards/371026a1-2e76-44a3-a699-c485b3c59cb2/tasks HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Task 4",
+  "order": "4",
+  "description": "Board 2 Column 1",
+  "userId": "c2fa437a-bdb2-42ee-b48e-341e3d47f5c3",
+  "columnId": "3"
+}
+
+### delete task
+DELETE http://localhost:4000/boards/ba2c0425-e192-44a2-8329-f309b14e4019/tasks/79e8cb6f-4e75-42ad-83c3-cd1f190745c8 HTTP/1.1
+
+### update task
+PUT http://localhost:4000/boards/ba2c0425-e192-44a2-8329-f309b14e4019/tasks/79e8cb6f-4e75-42ad-83c3-cd1f190745c8 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Task new",
+  "order": "NWWWWW",
+  "description": "Priority",
+  "userId": "44dd8eca-f741-4977-ab88-adee842fa45e",
+  "columnId": "123"
+}
