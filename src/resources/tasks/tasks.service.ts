@@ -1,152 +1,96 @@
-import { FastifyReply, FastifyRequest } from "fastify";
+import { FastifyRequest, FastifyReply } from 'fastify';
+import isUuid from 'uuid-validate';
 
-const { v4: uuidv4 } = require('uuid');
-const isUuid = require('uuid-validate');
-
-let tasks = require('./tasks.repository');
-
-interface taskParams {
-  taskId: string;
-  boardId: string;
-}
-
-export interface TaskBody {
-  taskId: string,
-  title: string,
-  order: number,
-  description: string,
-  userId: string,
-  boardId: string,
-  columnId: string,
-}
-
-type taskRequest = FastifyRequest<{
-  Params: taskParams,
-  Body: TaskBody,
-}>
-
-// helpers functions
-const findBoardTasks = (boardId: string) =>
-  tasks.filter((task: TaskBody) => task.boardId === boardId);
-
-const findTask = (boardId: string, taskId: string) =>
-  tasks.find((task: TaskBody) => task.boardId === boardId && task.taskId === taskId);
+import {
+  ITaskReqBody,
+  ITaskReqParam,
+  ITaskResBody,
+} from '../../common/interfaces';
+import { tasksDbFunctions } from './tasks.repository';
+import { Task } from './tasks.model';
 
 // GET boards/:boardId/tasks - get all tasks
-export const getAllTasks = (request: taskRequest, reply: FastifyReply) => {
-  const { boardId } = request.params;
+export const getAllTasks = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { boardId } = request.params as ITaskReqParam;
 
   if (!isUuid(boardId)) {
-    reply.code(400).send({ message: 'taskId is not uuid format' });
+    reply.code(400).send({ message: 'boardId is not uuid format' });
   }
 
-  const board = findBoardTasks(boardId);
+  const boardTasks = await tasksDbFunctions.getAllTasks(boardId);
 
-  if (board === undefined) {
-    reply.code(404).send({ message: `board with taskId: ${board} did not found` });
-  }
-
-  reply.send(board);
+  if (boardTasks === null) {
+    reply
+      .code(404)
+      .send({ message: `board with id: ${boardId} did not found` });
+  } else reply.send(boardTasks);
 };
 
-// GET boards/:boardId/tasks/:taskId - get the task by taskId
-export const getTask = (request: taskRequest, reply: FastifyReply) => {
-  const { taskId, boardId } = request.params;
+// GET boards/:boardId/tasks/:taskId - get the task by id
+export const getTask = async (request: FastifyRequest, reply: FastifyReply) => {
+  const { boardId, taskId } = request.params as ITaskReqParam;
 
   if (!isUuid(taskId) || !isUuid(boardId)) {
-    reply.code(400).send({ message: 'taskId is not uuid format' });
+    reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const task = findTask(boardId, taskId);
+  const task = await tasksDbFunctions.getTask(boardId, taskId);
 
-  if (task === undefined) {
-    reply.code(404).send({ message: `task with taskId: ${taskId} did not found` });
-  }
-
-  reply.send(task);
+  if (task === null) {
+    reply.code(404).send({ message: `task with id: ${taskId} did not found` });
+  } else reply.send(task);
 };
 
 // POST boards/:boardId/tasks - create task
-export const addTask = (request: taskRequest, reply: FastifyReply) => {
-  const { boardId } = request.params;
-  const {
-    title,
-    order,
-    description,
-    userId = uuidv4(),
-    columnId = uuidv4(),
-  } = request.body;
+export const addTask = async (request: FastifyRequest, reply: FastifyReply) => {
+  const { boardId } = request.params as ITaskReqParam;
+  const newTask: ITaskResBody = new Task(request.body as ITaskReqBody);
 
-  const task = {
-    taskId: uuidv4(),
-    title,
-    order,
-    description,
-    userId,
-    boardId,
-    columnId,
-  };
-
-  tasks = [...tasks, task];
-
-  reply.code(201).send(task);
+  const task = await tasksDbFunctions.addTask(boardId, newTask);
+  if (task === null) {
+    reply.code(404).send('Board not found');
+  } else {
+    reply.code(201).send(task);
+  }
 };
 
 // PUT boards/:boardId/tasks/:taskId - update task
-export const updateTask = (request: taskRequest, reply: FastifyReply) => {
-  const { taskId, boardId } = request.params;
+export const updateTask = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { taskId, boardId } = request.params as ITaskReqParam;
+  const newTask = new Task(request.body as ITaskReqBody);
 
   if (!isUuid(taskId) || !isUuid(boardId)) {
-    reply.code(400).send({ message: 'taskId is not uuid format' });
+    reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const task = findTask(boardId, taskId);
+  const task = await tasksDbFunctions.updateTask(taskId, boardId, newTask);
 
-  if (task === undefined) {
-    reply.code(404).send({ message: `task with taskId: ${taskId} did not found` });
-  }
-
-  const {
-    title = task.title,
-    order = task.order,
-    description = task.description,
-    userId = task.userId,
-    columnId = task.columnId,
-  } = request.body;
-
-  tasks = tasks.map((it: TaskBody) =>
-    it.taskId === taskId
-      ? { taskId, title, order, description, userId, boardId, columnId }
-      : it
-  );
-
-  reply.send(task);
+  if (task === null) {
+    reply.code(404).send({ message: `task with id: ${taskId} did not found` });
+  } else reply.send(task);
 };
 
 // DELETE boards/:boardId/tasks/:taskId - delete task
-export const deleteTask = (request: taskRequest, reply: FastifyReply) => {
-  const { taskId, boardId } = request.params;
+export const deleteTask = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { taskId, boardId } = request.params as ITaskReqParam;
+  const newTask = new Task(request.body as ITaskReqBody);
 
   if (!isUuid(taskId) || !isUuid(boardId)) {
-    reply.code(400).send({ message: 'taskId is not uuid format' });
+    reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const task = findTask(boardId, taskId);
+  const task = await tasksDbFunctions.updateTask(taskId, boardId, newTask);
 
-  if (task === undefined) {
-    reply.code(404).send({ message: `task with taskId: ${taskId} did not found` });
-  }
-
-  tasks = tasks.filter((t: TaskBody) => t.taskId !== taskId);
-
-  reply.send({ message: `task ${taskId} deleted successfully` });
+  if (task === null) {
+    reply.code(404).send({ message: `task with id: ${taskId} did not found` });
+  } else reply.send(task);
 };
-
-
-// module.exports = {
-//   getAllTasks,
-//   getTask,
-//   addTask,
-//   deleteTask,
-//   updateTask,
-// };

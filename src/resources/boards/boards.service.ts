@@ -1,118 +1,92 @@
-import { FastifyReply, FastifyRequest } from "fastify";
-import { TaskBody } from '../tasks/tasks.service'
+import isUuid from 'uuid-validate';
+import { FastifyReply, FastifyRequest } from 'fastify';
 
-const { v4: uuidv4 } = require('uuid');
-const isUuid = require('uuid-validate');
+import {
+  IBoardReqBody,
+  IBoardReqParam,
+  IBoardResBody,
+} from '../../common/interfaces';
+import { boardsDbFunctions } from './boards.repository';
+import { Board } from './boards.model';
 
-let boards = require('./boards.repository');
-let tasks = require('../tasks/tasks.repository');
+// GET method, api /boards
+export const getAllBoards = async (_: FastifyRequest, reply: FastifyReply) => {
+  const boards: IBoardResBody[] = await boardsDbFunctions.getAllBoards();
 
-interface BoardParams {
-  boardId: string;
-}
-
-type ColumnType = {
-  id: string, title: string, columns: string
-}
-
-interface BoardBody {
-  id: string,
-  title: string,
-  columns: ColumnType,
-}
-
-type BoardRequest = FastifyRequest<{
-  Params: BoardParams,
-  Body: BoardBody,
-}>
-
-const findBoard = (id: string) => boards.find((b: BoardBody) => b.id === id);
-
-// GET /boards - get all boards
-const getAllBoards = (request: FastifyRequest, reply: FastifyReply) => {
   reply.send(boards);
 };
 
-// GET /boards/:boardId - get the board by boardId
-const getBoard = (request: BoardRequest, reply: FastifyReply) => {
-  const { boardId } = request.params;
+// GET method, api /boards/:boardId
+export const getBoard = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { boardId } = request.params as IBoardReqParam;
 
   if (!isUuid(boardId)) {
-    reply.code(400).send({ message: 'boardId is not uuid format' });
+    reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const board = findBoard(boardId);
+  const board: IBoardReqBody | undefined = await boardsDbFunctions.getBoard(
+    boardId
+  );
 
-  if (board === undefined) {
-    reply.code(404).send({ message: `board with boardId: ${boardId} did not found` });
-  }
-
-  reply.send(board);
+  if (!board) {
+    reply
+      .code(404)
+      .send({ message: `board with id: ${boardId} did not found` });
+  } else reply.send(board);
 };
 
-// POST /boards - create board
-const addBoard = (request: BoardRequest, reply: FastifyReply) => {
-  const { title, columns } = request.body;
+// POST method, api /boards
+export const addBoard = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const newBoard: IBoardResBody = new Board(request.body as IBoardReqBody);
 
-  const board = {
-    id: uuidv4(),
-    title,
-    columns,
-  };
+  await boardsDbFunctions.addBoard(newBoard);
 
-  boards = [...boards, board];
-
-  reply.code(201).send(board);
+  reply.code(201).send(newBoard);
 };
 
-// PUT /boards/:boardId - update board
-const updateBoard = (request: BoardRequest, reply: FastifyReply) => {
-  const { boardId } = request.params;
+// PUT method, api /boards/:boardId
+export const updateBoard = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { boardId } = request.params as IBoardReqParam;
 
   if (!isUuid(boardId)) {
-    reply.code(400).send({ message: 'boardId is not uuid format' });
+    reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const board = findBoard(boardId);
+  const board: IBoardResBody = new Board(request.body as IBoardReqBody);
 
-  if (board === undefined) {
-    reply.code(404).send({ message: `board with boardId: ${boardId} did not found` });
-  }
+  const updatedBoard = await boardsDbFunctions.updateBoard(boardId, board);
 
-  const { title, columns } = request.body;
-
-  boards = boards.map((b: BoardBody) => (b.id === boardId ? { boardId, title, columns } : b));
-
-
-
-  reply.send(board);
+  if (!updatedBoard) {
+    reply
+      .code(404)
+      .send({ message: `board with id: ${boardId} did not found` });
+  } else reply.send(updatedBoard);
 };
 
-// DELETE /boards/:boardId - delete board
-const deleteBoard = (request: BoardRequest, reply: FastifyReply) => {
-  const { boardId } = request.params;
+// DELETE method, api /boards/:boardId
+export const deleteBoard = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { boardId } = request.params as IBoardReqParam;
 
   if (!isUuid(boardId)) {
-    reply.code(400).send({ message: 'boardId is not uuid format' });
+    reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const board = findBoard(boardId);
+  const deletedBoardInd = await boardsDbFunctions.deleteBoard(boardId);
 
-  if (board === undefined) {
-    reply.code(404).send({ message: `board with boardId: ${boardId} did not found` });
-  }
-
-  boards = boards.filter((b: BoardBody) => b.id !== boardId);
-  
-  tasks = tasks.filter((t: TaskBody) => t.boardId !== boardId)
-
-  reply.send({ message: `board ${boardId} deleted successfully` });
-};
-
-export {
-  getAllBoards,
-  getBoard,
-  addBoard,
-  deleteBoard,
-  updateBoard,
+  if (deletedBoardInd < 0) {
+    reply.code(404).send(`board with id: ${boardId} did not found`);
+  } else reply.code(204);
+  // .send({ message: `board ${boardId} has been deleted successfully` });
 };

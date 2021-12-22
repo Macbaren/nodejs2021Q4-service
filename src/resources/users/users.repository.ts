@@ -1,4 +1,7 @@
-const users: { userId: string, name: string, login: string}[] = [
+import { IUserResBody } from '../../common/interfaces';
+import { setUsersIdToNull } from '../tasks/tasks.repository';
+
+const users: IUserResBody[] = [
   // {
   //   id: '44dd8eca-f741-4977-ab88-adee842fa45e',
   //   name: 'Andrey 1',
@@ -46,22 +49,41 @@ const users: { userId: string, name: string, login: string}[] = [
   // },
 ];
 
-const findOne = (userId: string) => users.find((u) => u.userId === userId);
+export const usersDbFunctions = {
+  // GET method, api /users
+  getAllUsers: async () => users,
 
-const noPasswordUser = (user: object | undefined) => {
-  const npUser = JSON.parse(JSON.stringify(user));
-  delete npUser.password;
-  return npUser;
+  // GET method, api /users/:userId
+  getUser: async (id: IUserResBody['id']) => {
+    const user = users.find((u) => u.id === id);
+    return user;
+  },
+
+  // POST method, api /users
+  addUser: async (newUser: IUserResBody) => {
+    users.push(newUser);
+  },
+
+  // PUT method, api /users/:userId
+  updateUser: async (id: IUserResBody['id'], user: IUserResBody) => {
+    const updUserIndex = users.findIndex((u) => u.id === id);
+
+    if (updUserIndex < 0) return null;
+
+    users[updUserIndex] = { ...user, id };
+
+    return { ...user, id };
+  },
+
+  deleteUser: async (id: IUserResBody['id']) => {
+    const delUserIndex = users.findIndex((user) => user.id === id);
+
+    if (delUserIndex < 0) return null;
+
+    setUsersIdToNull(id);
+
+    users.splice(delUserIndex, 1);
+
+    return delUserIndex;
+  },
 };
-
-// GET method, api /users
-const getAll = () => {
-  const noPasswordUsers = users.map((user) => noPasswordUser(user));
-
-  return noPasswordUsers
-};
-
-// GET method, api /users/:userId
-const getOne = (userId: string) => noPasswordUser(findOne(userId));
-
-module.exports = {users, findOne, getAll, getOne};

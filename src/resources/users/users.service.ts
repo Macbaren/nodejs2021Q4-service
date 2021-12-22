@@ -1,131 +1,77 @@
-import { FastifyReply, FastifyRequest } from "fastify";
+import isUuid from 'uuid-validate';
+import { FastifyReply, FastifyRequest } from 'fastify';
 
-import {deleteUserFromTask} from '../tasks/tasks.repository';
-
-const { v4: uuidv4 } = require('uuid');
-const isUuid = require('uuid-validate');
-
-let { users } = require('./users.repository');
-const { getAll } = require('./users.repository');
-
-
-interface userParams {
-  userId: string;
-}
-
-interface userBody {
-  userId: string;
-  name: string;
-  login: string; 
-  password: string;
-}
-
-type getUserRequest = FastifyRequest<{
-  Params: userParams,
-  Body: userBody,
-}>
-
-type addUserRequest = FastifyRequest<{
-   Params: userParams,
-   Body: userBody, 
-}>
-
-const findUser = (id: string) => users.find((u: userBody) => u.userId === id);
-
-const noPasswordUser = (user: object) => {
-  const npUser = JSON.parse(JSON.stringify(user));
-  delete npUser.password;
-  return npUser;
-};
+import {
+  IUserReqBody,
+  IUserReqParam,
+  IUserResBody,
+} from '../../common/interfaces';
+import { usersDbFunctions } from './users.repository';
+import { User } from './users.model';
 
 // GET method, api /users
-export const getAllUsers = (request: FastifyRequest, reply: FastifyReply) => {
-  // const noPasswordUsers = users.map((user) => noPasswordUser(user));
+export const getAllUsers = async (_: FastifyRequest, reply: FastifyReply) => {
+  const users: IUserResBody[] = await usersDbFunctions.getAllUsers();
 
-  reply.send(getAll());
+  reply.send(users);
 };
 
 // GET method, api /users/:userId
-export const getUser = (request: getUserRequest, reply: FastifyReply) => {
-  const { userId } = request.params;
-
-  if (!isUuid(userId)) {
-    reply.code(400).send({ message: 'userId is not uuid format' });
-  }
-
-  const user = findUser(userId);
-
-  if (user === undefined) {
-    reply.code(404).send({ message: `user with userId: ${userId} did not found` });
-  }
-
-  reply.send(noPasswordUser(user));
-};
-
-// POST method, api /users
-export const addUser = (request: addUserRequest, reply: FastifyReply) => {
-  const { name, login, password } = request.body;
-
-  const user = {
-    id: uuidv4(),
-    name,
-    login,
-    password,
-  };
-
-  users = [...users, user];
-
-  reply.code(201).send(noPasswordUser(user));
-};
-
-// PUT method, api /users/:userId
-export const updateUser = (request: getUserRequest, reply: FastifyReply) => {
-  const { userId } = request.params;
+export const getUser = async (request: FastifyRequest, reply: FastifyReply) => {
+  const { userId } = request.params as IUserReqParam;
 
   if (!isUuid(userId)) {
     reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const user = findUser(userId);
+  const user: IUserReqBody | undefined = await usersDbFunctions.getUser(userId);
 
-  if (user === undefined) {
+  if (!user) {
     reply.code(404).send({ message: `user with id: ${userId} did not found` });
+  } else reply.send(user);
+};
+
+// POST method, api /users
+export const addUser = async (request: FastifyRequest, reply: FastifyReply) => {
+  const newUser: IUserResBody = new User(request.body as IUserReqBody);
+
+  await usersDbFunctions.addUser(newUser);
+
+  reply.code(201).send(newUser);
+};
+
+// PUT method, api /users/:userId
+export const updateUser = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { userId } = request.params as IUserReqParam;
+
+  if (!isUuid(userId)) {
+    reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const { name = user.name, login  = user.login, password = user.password } = request.body;
+  const user: IUserResBody = new User(request.body as IUserReqBody);
 
-  users = users.map((it: userBody) =>
-    it.userId === userId ? { userId, name, login, password } : it
-  );
+  const updatedUser = await usersDbFunctions.updateUser(userId, user);
 
-  reply.send(noPasswordUser(user));
+  if (!updatedUser) {
+    reply.code(404).send({ message: `user with id: ${userId} did not found` });
+  } else reply.send(updatedUser);
 };
 
 // DELETE method, api /users/:userId
-export const deleteUser = (request: getUserRequest, reply: FastifyReply) => {
-  const { userId } = request.params;
+export const deleteUser = (request: FastifyRequest, reply: FastifyReply) => {
+  const { userId } = request.params as IUserReqParam;
 
   if (!isUuid(userId)) {
-    reply.code(400).send({ message: 'userId is not uuid format' });
+    reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const user = findUser(userId);
+  const deletedUser = usersDbFunctions.deleteUser(userId);
 
-  if (user === undefined) {
-    reply.code(404).send({ message: `user with userId: ${userId} did not found` });
-  }
-
-  users = users.filter((u: userBody) => u.userId !== userId);
-
-  deleteUserFromTask(userId)
-
-  reply.send({ message: `user ${userId} deleted successfully` });
+  if (!deletedUser) {
+    reply.code(404).send({ message: `user with id: ${userId} did not found` });
+  } else
+    reply.send({ message: `user ${userId} has been deleted successfully` });
 };
-
-// module.exports = {
-//   getAllUsers,
-//   getUser,
-//   addUser,
-//   deleteUser,
-//   updateUser,
-// };

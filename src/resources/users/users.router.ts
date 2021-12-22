@@ -1,29 +1,32 @@
-import { FastifyInstance } from "fastify";
+import { FastifyInstance, FastifyPluginOptions } from 'fastify';
 
-const {
+import {
   getAllUsersOps,
   getUserOps,
   postUserOps,
   deleteUserOps,
   updateUserOps,
-} = require('./users.model');
+} from './users.model';
 
-export function usersRoutes(fastify: FastifyInstance, done: Function) {
+export function usersRoutes(
+  fastify: FastifyInstance,
+  _: FastifyPluginOptions,
+  done: CallableFunction
+) {
   // get all users
   fastify.get('/users', getAllUsersOps);
-  
+
   // get required user
   fastify.get('/users/:userId', getUserOps);
-  
+
   // add user
   fastify.post('/users', postUserOps);
-  
+
   // update user
-  fastify.put('/users/:id', updateUserOps);
-  
+  fastify.put('/users/:userId', updateUserOps);
+
   // delete user
   fastify.delete('/users/:userId', deleteUserOps);
-  
+
   done();
 }
-

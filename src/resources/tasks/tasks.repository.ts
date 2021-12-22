@@ -1,14 +1,11 @@
+import {
+  IBoardResBody,
+  ITaskResBody,
+  IUserResBody,
+} from '../../common/interfaces';
+import { isBoardExist } from '../boards/boards.repository';
 
-export type TaskType = {
-  id: string,
-  title: string,
-  order: number,
-  description: string,
-  userId: string,
-  boardId: string,
-  columnId: string,
-}
-export const tasks: TaskType[] = [
+const tasks: ITaskResBody[] = [
   // {
   //   id: '79e8cb6f-4e75-42ad-83c3-cd1f190745c8',
   //   title: 'Task 1',
@@ -38,8 +35,91 @@ export const tasks: TaskType[] = [
   // },
 ];
 
-export const deleteUserFromTask = (userId: string) => {
-  tasks.map((t) => (t.userId === userId ? { ...t, userId: null } : t));
-}
+export const tasksDbFunctions = {
+  // GET boards/:boardId/tasks - get all tasks
+  getAllTasks: async (boardId: ITaskResBody['boardId']) => {
+    if (isBoardExist(boardId)) {
+      const allTasks = tasks.filter((task) => task.boardId === boardId);
+      return allTasks;
+    }
+    return null;
+  },
 
-module.exports = tasks;
+  // GET boards/:boardId/tasks/:taskId - get the task by id
+  getTask: async (
+    boardId: ITaskResBody['boardId'],
+    taskId: ITaskResBody['id']
+  ) => {
+    if (isBoardExist(boardId)) {
+      const boardTasks = tasks.filter(
+        (boardTask) => boardTask.boardId === boardId
+      );
+      const task = boardTasks.find((t) => t.id === taskId);
+
+      if (!task) {
+        return null;
+      }
+      return task;
+    }
+    return null;
+  },
+
+  // POST boards/:boardId/tasks - create task
+  addTask: async (boardId: ITaskResBody['boardId'], task: ITaskResBody) => {
+    if (isBoardExist(boardId)) {
+      const taskObj = { ...task, boardId };
+      tasks.push(taskObj);
+      return taskObj;
+    }
+    return null;
+  },
+
+  // PUT boards/:boardId/tasks/:taskId - update task
+  updateTask: async (
+    taskId: ITaskResBody['id'],
+    boardId: ITaskResBody['boardId'],
+    task: ITaskResBody
+  ) => {
+    if (isBoardExist(boardId)) {
+      const index = tasks.findIndex((elem) => elem.id === taskId);
+      if (index < 0) {
+        return null;
+      }
+      tasks[index] = { ...task, boardId, id: taskId };
+      return tasks[index];
+    }
+    return null;
+  },
+
+  // DELETE boards/:boardId/tasks/:taskId - delete task
+  deleteTask: async (
+    taskId: ITaskResBody['id'],
+    boardId: ITaskResBody['boardId']
+  ) => {
+    if (isBoardExist(boardId)) {
+      const index = tasks.findIndex((task) => task.id === taskId);
+      if (index < 0) {
+        return null;
+      }
+      tasks.splice(index, 1);
+      return index;
+    }
+    return null;
+  },
+};
+
+export const setUsersIdToNull = async (id: IUserResBody['id']) => {
+  tasks.forEach((task, ind) => {
+    if (task.userId === id && tasks[ind]) {
+      tasks[ind].userId = null;
+    }
+  });
+};
+
+export const removeBoardTasks = async (id: IBoardResBody['id']) => {
+  tasks.forEach((task, ind) => {
+    if (task.boardId === id) {
+      tasks.splice(ind, 1);
+    }
+  });
+};

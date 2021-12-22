@@ -1,3 +1,6 @@
+import { v4 as uuid } from 'uuid';
+
+import { IBoardReqBody, IColumn } from '../../common/interfaces';
 import {
   getAllBoards,
   getBoard,
@@ -6,23 +9,72 @@ import {
   updateBoard,
 } from './boards.service';
 
+export class Board {
+  public id;
+
+  public title;
+
+  public columns: IColumn[];
+
+  /**
+   * Create new board by title and columns and generate id by uuid v4.
+   * @param boardFromFE - board object IBoardReqBody.
+   * @returns board object with id === uuid v4 IBoardResBody.
+   */
+
+  constructor(boardFromFE: IBoardReqBody) {
+    this.id = uuid();
+    this.title = boardFromFE.title;
+    this.columns = boardFromFE.columns;
+  }
+}
+
 // board schema
-const Board = {
+const BoardBody = {
   type: 'object',
   properties: {
     id: { type: 'string' },
     title: { type: 'string' },
-    columns: { type: 'array' },
+    columns: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          title: { type: 'string' },
+          order: { type: 'number' },
+        },
+      },
+    },
+  },
+};
+
+// board required schema
+const BoardBodyReq = {
+  type: 'object',
+  required: ['title', 'columns'],
+  properties: {
+    title: { type: 'string' },
+    columns: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          title: { type: 'string' },
+          order: { type: 'number' },
+        },
+      },
+    },
   },
 };
 
 // Options for get all boards
-const getAllBoardsOps = {
+export const getAllBoardsOps = {
   schema: {
     response: {
       200: {
         type: 'array',
-        boards: Board,
+        boards: BoardBody,
       },
     },
   },
@@ -30,62 +82,37 @@ const getAllBoardsOps = {
 };
 
 // Options for single board
-const getBoardOps = {
+export const getBoardOps = {
   schema: {
     response: {
-      200: Board,
+      200: BoardBody,
     },
   },
   handler: getBoard,
 };
 
 // Options for adding board
-const postBoardOps = {
+export const postBoardOps = {
   schema: {
-    body: {
-      type: 'object',
-      required: ['title', 'columns'],
-      properties: {
-        title: { type: 'string' },
-        columns: { type: 'array' },
-      },
-    },
+    body: BoardBodyReq,
     response: {
-      201: Board,
+      201: BoardBody,
     },
   },
   handler: addBoard,
 };
 
-// Options for single board
-const deleteBoardOps = {
-  schema: {
-    response: {
-      200: {
-        type: 'object',
-        properties: {
-          message: { type: 'string' },
-        },
-      },
-    },
-  },
-  handler: deleteBoard,
-};
-
 // Options for updating board
-const updateBoardOps = {
+export const updateBoardOps = {
   schema: {
     response: {
-      200: Board,
+      200: BoardBody,
     },
   },
   handler: updateBoard,
 };
 
-export {
-  getAllBoardsOps,
-  getBoardOps,
-  postBoardOps,
-  deleteBoardOps,
-  updateBoardOps,
+// Options for single board
+export const deleteBoardOps = {
+  handler: deleteBoard,
 };

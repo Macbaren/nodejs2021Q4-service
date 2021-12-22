@@ -1,22 +1,71 @@
-const {
+import { v4 as uuid } from 'uuid';
+import { ITaskReqBody } from '../../common/interfaces';
+
+import {
   getAllTasks,
   getTask,
   addTask,
-  deleteTask,
   updateTask,
-} = require('./tasks.service');
+  deleteTask,
+} from './tasks.service';
+
+export class Task {
+  id;
+
+  title;
+
+  order;
+
+  description;
+
+  userId;
+
+  boardId: string;
+
+  columnId;
+
+  /**
+   * Create new task by object with type ITaskReqBody and generate id by uuid v4.
+   * @param taskFromFE - task object ITaskReqBody.
+   * @returns task object with id === uuid v4 ITaskResBody.
+   */
+
+  constructor(taskFromFE: ITaskReqBody) {
+    this.id = uuid();
+    this.title = taskFromFE.title;
+    this.order = taskFromFE.order;
+    this.description = taskFromFE.description;
+    this.userId = taskFromFE.userId;
+    this.boardId = taskFromFE.boardId;
+    this.columnId = taskFromFE.columnId;
+  }
+}
 
 // task schema
-export const Task = {
+export const TaskBody = {
   type: 'object',
   properties: {
     id: { type: 'string' },
     title: { type: 'string' },
-    description: { type: 'string' },
     order: { type: 'number' },
-    userId: { type: 'string' },
+    description: { type: 'string' },
+    userId: { type: ['string', 'null'] },
     boardId: { type: 'string' },
-    columnId: { type: 'string' },
+    columnId: { type: ['string', 'null'] },
+  },
+};
+
+// task required schema
+const TaskBodyReq = {
+  type: 'object',
+  required: ['title', 'order', 'description', 'userId'],
+  properties: {
+    title: { type: 'string' },
+    order: { type: 'number' },
+    description: { type: 'string' },
+    userId: { type: ['string', 'null'] },
+    columnId: { type: ['string', 'null'] },
+    boardId: { type: 'string' },
   },
 };
 
@@ -26,7 +75,7 @@ export const getAllTasksOps = {
     response: {
       200: {
         type: 'array',
-        tasks: Task,
+        tasks: TaskBody,
       },
     },
   },
@@ -37,7 +86,7 @@ export const getAllTasksOps = {
 export const getTaskOps = {
   schema: {
     response: {
-      200: Task,
+      200: TaskBody,
     },
   },
   handler: getTask,
@@ -46,61 +95,26 @@ export const getTaskOps = {
 // Options for adding task
 export const postTaskOps = {
   schema: {
-    body: {
-      type: 'object',
-      required: [
-        'title',
-        'order',
-        'description',
-        'userId',
-        'boardId',
-        'columnId',
-      ],
-      properties: {
-        title: { type: 'string' },
-        description: { type: 'string' },
-        order: { type: 'number' },
-        userId: { type: 'string' },
-        boardId: { type: 'string' },
-        columnId: { type: 'string' },
-      },
-    },
+    body: TaskBodyReq,
     response: {
-      201: Task,
+      201: TaskBody,
     },
   },
   handler: addTask,
 };
 
-// Options for single task
-export const deleteTaskOps = {
-  schema: {
-    response: {
-      200: {
-        type: 'object',
-        properties: {
-          message: { type: 'string' },
-        },
-      },
-    },
-  },
-  handler: deleteTask,
-};
-
 // Options for updating task
 export const updateTaskOps = {
   schema: {
+    body: TaskBodyReq,
     response: {
-      200: Task,
+      200: TaskBody,
     },
   },
   handler: updateTask,
 };
 
-// module.exports = {
-//   getAllTasksOps,
-//   getTaskOps,
-//   postTaskOps,
-//   deleteTaskOps,
-//   updateTaskOps,
-// };
+// Options for single task
+export const deleteTaskOps = {
+  handler: deleteTask,
+};
