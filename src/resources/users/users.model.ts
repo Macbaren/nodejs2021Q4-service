@@ -4,8 +4,8 @@ import {
   getAllUsers,
   getUser,
   addUser,
-  updateUser,
   deleteUser,
+  updateUser,
 } from './users.service';
 
 export class User {
@@ -23,7 +23,7 @@ export class User {
    * @returns user object with id === uuid v4 IUserResBody.
    */
 
-  constructor({ name = 'USER', login = 'user', password = 'admin' } = {}) {
+  constructor({ name = 'USER', login = 'user', password = 'P@55w0rd' } = {}) {
     this.id = uuid();
     this.name = name;
     this.login = login;
@@ -32,23 +32,23 @@ export class User {
 }
 
 // user schema
-const UserBody = {
+export const UserBody = {
   type: 'object',
-  required: ['name', 'login', 'password'],
   properties: {
     id: { type: 'string' },
     name: { type: 'string' },
     login: { type: 'string' },
-    password: { type: 'string' },
   },
 };
 
-const ResponseUser = {
+// user required schema
+const UserBodyReq = {
   type: 'object',
+  required: ['name', 'login', 'password'],
   properties: {
-    id: { type: 'string' },
     name: { type: 'string' },
     login: { type: 'string' },
+    password: { type: 'string' },
   },
 };
 
@@ -58,7 +58,7 @@ export const getAllUsersOps = {
     response: {
       200: {
         type: 'array',
-        users: ResponseUser,
+        users: UserBody,
       },
     },
   },
@@ -69,7 +69,7 @@ export const getAllUsersOps = {
 export const getUserOps = {
   schema: {
     response: {
-      200: ResponseUser,
+      200: UserBody,
     },
   },
   handler: getUser,
@@ -78,9 +78,9 @@ export const getUserOps = {
 // Options for adding user
 export const postUserOps = {
   schema: {
-    body: UserBody,
+    body: UserBodyReq,
     response: {
-      201: ResponseUser,
+      201: UserBody,
     },
   },
   handler: addUser,
@@ -89,9 +89,9 @@ export const postUserOps = {
 // Options for updating user
 export const updateUserOps = {
   schema: {
-    body: UserBody,
+    body: UserBodyReq,
     response: {
-      200: ResponseUser,
+      200: UserBody,
     },
   },
   handler: updateUser,
@@ -99,15 +99,5 @@ export const updateUserOps = {
 
 // Options for deleting user
 export const deleteUserOps = {
-  schema: {
-    response: {
-      200: {
-        type: 'object',
-        properties: {
-          message: { type: 'string' },
-        },
-      },
-    },
-  },
   handler: deleteUser,
 };

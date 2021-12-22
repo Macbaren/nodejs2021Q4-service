@@ -9,10 +9,6 @@ import {
 import { usersDbFunctions } from './users.repository';
 import { User } from './users.model';
 
-// const { v4: uuidv4 } = require('uuid');
-
-// const findUser = (id) => users.find((u) => u.id === id);
-
 // GET method, api /users
 export const getAllUsers = async (_: FastifyRequest, reply: FastifyReply) => {
   const users: IUserResBody[] = await usersDbFunctions.getAllUsers();

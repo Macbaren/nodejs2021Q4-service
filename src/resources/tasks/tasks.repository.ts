@@ -1,7 +1,5 @@
 import {
   IBoardResBody,
-  ITaskReqBody,
-  ITaskReqParam,
   ITaskResBody,
   IUserResBody,
 } from '../../common/interfaces';
@@ -52,17 +50,59 @@ export const tasksDbFunctions = {
     boardId: ITaskResBody['boardId'],
     taskId: ITaskResBody['id']
   ) => {
-    console.log('GEEEEEEEEEEEEET', boardId, taskId, tasks);
     if (isBoardExist(boardId)) {
       const boardTasks = tasks.filter(
         (boardTask) => boardTask.boardId === boardId
       );
-      const task = boardTasks.find((task) => task.id === taskId);
+      const task = boardTasks.find((t) => t.id === taskId);
 
       if (!task) {
         return null;
       }
       return task;
+    }
+    return null;
+  },
+
+  // POST boards/:boardId/tasks - create task
+  addTask: async (boardId: ITaskResBody['boardId'], task: ITaskResBody) => {
+    if (isBoardExist(boardId)) {
+      const taskObj = { ...task, boardId };
+      tasks.push(taskObj);
+      return taskObj;
+    }
+    return null;
+  },
+
+  // PUT boards/:boardId/tasks/:taskId - update task
+  updateTask: async (
+    taskId: ITaskResBody['id'],
+    boardId: ITaskResBody['boardId'],
+    task: ITaskResBody
+  ) => {
+    if (isBoardExist(boardId)) {
+      const index = tasks.findIndex((elem) => elem.id === taskId);
+      if (index < 0) {
+        return null;
+      }
+      tasks[index] = { ...task, boardId, id: taskId };
+      return tasks[index];
+    }
+    return null;
+  },
+
+  // DELETE boards/:boardId/tasks/:taskId - delete task
+  deleteTask: async (
+    taskId: ITaskResBody['id'],
+    boardId: ITaskResBody['boardId']
+  ) => {
+    if (isBoardExist(boardId)) {
+      const index = tasks.findIndex((task) => task.id === taskId);
+      if (index < 0) {
+        return null;
+      }
+      tasks.splice(index, 1);
+      return index;
     }
     return null;
   },

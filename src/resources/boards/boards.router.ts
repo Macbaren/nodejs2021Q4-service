@@ -4,8 +4,8 @@ import {
   getAllBoardsOps,
   getBoardOps,
   postBoardOps,
-  updateBoardOps,
   deleteBoardOps,
+  updateBoardOps,
 } from './boards.model';
 
 export function boardsRoutes(
@@ -23,6 +23,5 @@ export function boardsRoutes(
   fastify.put('/boards/:boardId', updateBoardOps);
   // delete board
   fastify.delete('/boards/:boardId', deleteBoardOps);
-
   done();
 }

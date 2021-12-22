@@ -1,22 +1,27 @@
 import { v4 as uuid } from 'uuid';
-
 import { ITaskReqBody } from '../../common/interfaces';
 
 import {
   getAllTasks,
   getTask,
-  // addTask,
-  // deleteTask,
-  // updateTask,
+  addTask,
+  updateTask,
+  deleteTask,
 } from './tasks.service';
 
 export class Task {
   id;
+
   title;
+
   order;
+
   description;
+
   userId;
+
   boardId: string;
+
   columnId;
 
   /**
@@ -37,13 +42,13 @@ export class Task {
 }
 
 // task schema
-const TaskBody = {
+export const TaskBody = {
   type: 'object',
   properties: {
     id: { type: 'string' },
     title: { type: 'string' },
-    description: { type: 'string' },
     order: { type: 'number' },
+    description: { type: 'string' },
     userId: { type: ['string', 'null'] },
     boardId: { type: 'string' },
     columnId: { type: ['string', 'null'] },
@@ -56,11 +61,11 @@ const TaskBodyReq = {
   required: ['title', 'order', 'description', 'userId'],
   properties: {
     title: { type: 'string' },
-    description: { type: 'string' },
     order: { type: 'number' },
+    description: { type: 'string' },
     userId: { type: ['string', 'null'] },
-    boardId: { type: 'string' },
     columnId: { type: ['string', 'null'] },
+    boardId: { type: 'string' },
   },
 };
 
@@ -87,29 +92,29 @@ export const getTaskOps = {
   handler: getTask,
 };
 
-// // Options for adding task
-// export const postTaskOps = {
-//   schema: {
-//     body: TaskBodyReq,
-//   },
-//   response: {
-//     201: TaskBody,
-//   },
-//   handler: addTask,
-// };
+// Options for adding task
+export const postTaskOps = {
+  schema: {
+    body: TaskBodyReq,
+    response: {
+      201: TaskBody,
+    },
+  },
+  handler: addTask,
+};
 
-// // Options for updating task
-// export const updateTaskOps = {
-//   schema: {
-//     body: TaskBodyReq,
-//     response: {
-//       200: TaskBody,
-//     },
-//   },
-//   handler: updateTask,
-// };
+// Options for updating task
+export const updateTaskOps = {
+  schema: {
+    body: TaskBodyReq,
+    response: {
+      200: TaskBody,
+    },
+  },
+  handler: updateTask,
+};
 
-// // Options for single task
-// export const deleteTaskOps = {
-//   handler: deleteTask,
-// };
+// Options for single task
+export const deleteTaskOps = {
+  handler: deleteTask,
+};

@@ -30,102 +30,67 @@ export const getAllTasks = async (
 };
 
 // GET boards/:boardId/tasks/:taskId - get the task by id
-export const getTask = (request: FastifyRequest, reply: FastifyReply) => {
+export const getTask = async (request: FastifyRequest, reply: FastifyReply) => {
   const { boardId, taskId } = request.params as ITaskReqParam;
 
   if (!isUuid(taskId) || !isUuid(boardId)) {
     reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const task = tasksDbFunctions.getTask(boardId, taskId);
+  const task = await tasksDbFunctions.getTask(boardId, taskId);
 
-  if (task === undefined) {
+  if (task === null) {
     reply.code(404).send({ message: `task with id: ${taskId} did not found` });
-  }
-
-  reply.send(task);
+  } else reply.send(task);
 };
 
-// // POST boards/:boardId/tasks - create task
-// const addTask = (request, reply) => {
-//   const { boardId } = request.params;
-//   const {
-//     title,
-//     order,
-//     description,
-//     userId = uuidv4(),
-//     columnId = uuidv4(),
-//   } = request.body;
+// POST boards/:boardId/tasks - create task
+export const addTask = async (request: FastifyRequest, reply: FastifyReply) => {
+  const { boardId } = request.params as ITaskReqParam;
+  const newTask: ITaskResBody = new Task(request.body as ITaskReqBody);
 
-//   const task = {
-//     id: uuidv4(),
-//     title,
-//     order,
-//     description,
-//     userId,
-//     boardId,
-//     columnId,
-//   };
+  const task = await tasksDbFunctions.addTask(boardId, newTask);
+  if (task === null) {
+    reply.code(404).send('Board not found');
+  } else {
+    reply.code(201).send(task);
+  }
+};
 
-//   tasks = [...tasks, task];
+// PUT boards/:boardId/tasks/:taskId - update task
+export const updateTask = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { taskId, boardId } = request.params as ITaskReqParam;
+  const newTask = new Task(request.body as ITaskReqBody);
 
-//   reply.code(201).send(task);
-// };
+  if (!isUuid(taskId) || !isUuid(boardId)) {
+    reply.code(400).send({ message: 'id is not uuid format' });
+  }
 
-// // DELETE boards/:boardId/tasks/:taskId - delete task
-// const deleteTask = (request, reply) => {
-//   const { id, boardId } = request.params;
+  const task = await tasksDbFunctions.updateTask(taskId, boardId, newTask);
 
-//   if (!isUuid(id) || !isUuid(boardId)) {
-//     reply.code(400).send({ message: 'id is not uuid format' });
-//   }
+  if (task === null) {
+    reply.code(404).send({ message: `task with id: ${taskId} did not found` });
+  } else reply.send(task);
+};
 
-//   const task = findTask(boardId, id);
+// DELETE boards/:boardId/tasks/:taskId - delete task
+export const deleteTask = async (
+  request: FastifyRequest,
+  reply: FastifyReply
+) => {
+  const { taskId, boardId } = request.params as ITaskReqParam;
+  const newTask = new Task(request.body as ITaskReqBody);
 
-//   if (task === undefined) {
-//     reply.code(404).send({ message: `task with id: ${id} did not found` });
-//   }
+  if (!isUuid(taskId) || !isUuid(boardId)) {
+    reply.code(400).send({ message: 'id is not uuid format' });
+  }
 
-//   tasks = tasks.filter((t) => t.id !== id);
+  const task = await tasksDbFunctions.updateTask(taskId, boardId, newTask);
 
-//   reply.send({ message: `task ${id} deleted successfully` });
-// };
-
-// // PUT boards/:boardId/tasks/:taskId - update task
-// const updateTask = (request, reply) => {
-//   const { id, boardId } = request.params;
-
-//   if (!isUuid(id) || !isUuid(boardId)) {
-//     reply.code(400).send({ message: 'id is not uuid format' });
-//   }
-
-//   const task = findTask(boardId, id);
-
-//   if (task === undefined) {
-//     reply.code(404).send({ message: `task with id: ${id} did not found` });
-//   }
-
-//   const {
-//     title = task.title,
-//     order = task.order,
-//     description = task.description,
-//     userId = task.userId,
-//     columnId = task.columnId,
-//   } = request.body;
-
-//   tasks = tasks.map((it) =>
-//     it.id === id
-//       ? { id, title, order, description, userId, boardId, columnId }
-//       : it
-//   );
-
-//   reply.send(task);
-// };
-
-// module.exports = {
-//   getAllTasks,
-//   getTask,
-//   addTask,
-//   deleteTask,
-//   updateTask,
-// };
+  if (task === null) {
+    reply.code(404).send({ message: `task with id: ${taskId} did not found` });
+  } else reply.send(task);
+};

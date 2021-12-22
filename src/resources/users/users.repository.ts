@@ -1,8 +1,4 @@
-import {
-  IUserReqBody,
-  IUserReqParam,
-  IUserResBody,
-} from '../../common/interfaces';
+import { IUserResBody } from '../../common/interfaces';
 import { setUsersIdToNull } from '../tasks/tasks.repository';
 
 const users: IUserResBody[] = [
@@ -59,7 +55,7 @@ export const usersDbFunctions = {
 
   // GET method, api /users/:userId
   getUser: async (id: IUserResBody['id']) => {
-    const user = users.find((user) => user.id === id);
+    const user = users.find((u) => u.id === id);
     return user;
   },
 
@@ -70,7 +66,7 @@ export const usersDbFunctions = {
 
   // PUT method, api /users/:userId
   updateUser: async (id: IUserResBody['id'], user: IUserResBody) => {
-    const updUserIndex = users.findIndex((user) => user.id === id);
+    const updUserIndex = users.findIndex((u) => u.id === id);
 
     if (updUserIndex < 0) return null;
 

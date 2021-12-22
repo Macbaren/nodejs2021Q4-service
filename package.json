@@ -7,7 +7,7 @@
   },
   "type": "commonjs",
   "description": "REST service starter for RS School",
-  "main": "src/server.js",
+  "main": "src/server.ts",
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node build/server.js",
@@ -41,14 +41,17 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.ts": [
       "npm run lint"
     ]
   },
   "dependencies": {
+    "@typescript-eslint/parser": "^5.7.0",
+    "babel-eslint": "^10.1.0",
     "cross-env": "7.0.3",
     "dotenv": "10.0.0",
-    "fastify": "^3.24.0",
+    "fastify": "^3.24.1",
+    "fastify-static": "^4.5.0",
     "fastify-swagger": "^4.12.6",
     "uuid": "8.3.2",
     "uuid-validate": "^0.0.3"

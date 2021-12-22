@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
-import { IBoardReqBody, IColumn } from '../../common/interfaces';
 
+import { IBoardReqBody, IColumn } from '../../common/interfaces';
 import {
   getAllBoards,
   getBoard,
@@ -49,7 +49,7 @@ const BoardBody = {
   },
 };
 
-// required board schema
+// board required schema
 const BoardBodyReq = {
   type: 'object',
   required: ['title', 'columns'],
@@ -105,7 +105,6 @@ export const postBoardOps = {
 // Options for updating board
 export const updateBoardOps = {
   schema: {
-    body: BoardBodyReq,
     response: {
       200: BoardBody,
     },
@@ -113,7 +112,7 @@ export const updateBoardOps = {
   handler: updateBoard,
 };
 
-// Options for deleting board
+// Options for single board
 export const deleteBoardOps = {
   handler: deleteBoard,
 };
