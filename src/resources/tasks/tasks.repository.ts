@@ -110,7 +110,7 @@ export const tasksDbFunctions = {
 
 export const setUsersIdToNull = async (id: IUserResBody['id']) => {
   tasks.forEach((task, ind) => {
-    if (task.userId === id && tasks[ind]) {
+    if (task.userId === id ?? tasks[ind]) {
       tasks[ind].userId = null;
     }
   });
