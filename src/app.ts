@@ -5,7 +5,9 @@ import { usersRoutes } from './resources/users/users.router';
 import { boardsRoutes } from './resources/boards/boards.router';
 import { tasksRoutes } from './resources/tasks/tasks.router';
 
-export const server = fastify({ logger: true });
+export const server = fastify({
+  logger: { level: 'info', file: './src/logs/allLogs.txt' },
+});
 
 server.register(usersRoutes);
 server.register(boardsRoutes);
