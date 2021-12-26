@@ -10,10 +10,13 @@ const appRunLogging = () => {
   console.log(`Server starts at http://localhost:${PORT}`);
 };
 
-server.listen(PORT || 4000, (err) => {
-  if (err) {
+const start = async () => {
+  try {
+    await server.listen(PORT || 4000, appRunLogging);
+  } catch (err) {
     server.log.error(err);
     process.exit(1);
   }
-  return appRunLogging;
-});
+};
+
+start();

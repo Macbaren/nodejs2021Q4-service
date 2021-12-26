@@ -6,7 +6,27 @@ import { boardsRoutes } from './resources/boards/boards.router';
 import { tasksRoutes } from './resources/tasks/tasks.router';
 
 export const server = fastify({
-  logger: { level: 'info', file: './src/logs/allLogs.txt' },
+  logger: {
+    level: 'info',
+    file: './src/logs/allLogs.txt',
+    prettyPrint: true,
+    serializers: {
+      res(reply) {
+        return {
+          statusCode: reply.statusCode,
+        };
+      },
+      req(request) {
+        return {
+          method: request.method,
+          url: request.url,
+          path: request.routerPath,
+          parameters: request.params,
+          headers: request.headers,
+        };
+      },
+    },
+  },
 });
 
 server.register(usersRoutes);
