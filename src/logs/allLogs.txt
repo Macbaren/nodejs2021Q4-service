@@ -1,3 +1,0 @@
-[1640541575513] [32mINFO[39m (5832 on macbaren): [36mServer listening at http://127.0.0.1:4000[39m
-[1640541757624] [32mINFO[39m (10336 on macbaren): [36mServer listening at http://127.0.0.1:4000[39m
-[1640541991014] [32mINFO[39m (5708 on macbaren): [36mServer listening at http://127.0.0.1:4000[39m

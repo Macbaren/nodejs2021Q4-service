@@ -72,6 +72,7 @@ export const deleteUser = (request: FastifyRequest, reply: FastifyReply) => {
 
   if (!deletedUser) {
     reply.code(404).send({ message: `user with id: ${userId} did not found` });
-  } else
+  } else {
     reply.send({ message: `user ${userId} has been deleted successfully` });
+  }
 };
