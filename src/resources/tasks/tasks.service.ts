@@ -82,15 +82,15 @@ export const deleteTask = async (
   reply: FastifyReply
 ) => {
   const { taskId, boardId } = request.params as ITaskReqParam;
-  const newTask = new Task(request.body as ITaskReqBody);
+  // const newTask = new Task(request.body as ITaskReqBody);
 
   if (!isUuid(taskId) || !isUuid(boardId)) {
     reply.code(400).send({ message: 'id is not uuid format' });
   }
 
-  const task = await tasksDbFunctions.updateTask(taskId, boardId, newTask);
+  const task = await tasksDbFunctions.deleteTask(taskId, boardId);
 
   if (task === null) {
     reply.code(404).send({ message: `task with id: ${taskId} did not found` });
-  } else reply.send(task);
+  } else reply.code(204).send(task);
 };
