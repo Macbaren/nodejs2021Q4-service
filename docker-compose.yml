@@ -1,0 +1,16 @@
+version: '3.0'
+
+services:
+  my-api:
+    image: my-http
+    build: .
+    ports:
+      - '3000:3000'
+    restart: always
+    depends_on:
+      - postgres
+  postgres:
+    build: ./postgresql
+    ports:
+      - '5432:5432'
+    restart: always

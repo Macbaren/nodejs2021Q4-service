@@ -1,0 +1,3175 @@
+[1641222369799] [32mINFO[39m (2924 on macbaren): [36mServer listening at http://127.0.0.1:4000[39m
+[1641222378972] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1"
+[1641222378977] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 4.428600000217557
+    reqId: "req-1"
+[1641222378991] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-2"
+[1641222378994] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 3.1961000002920628
+    reqId: "req-2"
+[1641222378999] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/users/c75de1c5-66f1-4e91-b05a-93e95d0e3402",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "c75de1c5-66f1-4e91-b05a-93e95d0e3402"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-3"
+[1641222379001] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 2.1793999997898936
+    reqId: "req-3"
+[1641222379004] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/c75de1c5-66f1-4e91-b05a-93e95d0e3402",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "c75de1c5-66f1-4e91-b05a-93e95d0e3402"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-4"
+[1641222379005] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.6628000000491738
+    reqId: "req-4"
+[1641222379009] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-5"
+[1641222379010] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.9739000000990927
+    reqId: "req-5"
+[1641222379016] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/a142a155-9dfc-486b-b881-453136ee04fd",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "a142a155-9dfc-486b-b881-453136ee04fd"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-6"
+[1641222379017] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.4638000000268221
+    reqId: "req-6"
+[1641222379022] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-7"
+[1641222379023] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.5110999997705221
+    reqId: "req-7"
+[1641222379025] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "PUT",
+      "url": "/users/a873cd16-caf6-4349-8c74-02d0e8cddf9a",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "a873cd16-caf6-4349-8c74-02d0e8cddf9a"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "128",
+        "connection": "close"
+      }
+    }
+    reqId: "req-8"
+[1641222379026] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.7886999999172986
+    reqId: "req-8"
+[1641222379030] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/users/a873cd16-caf6-4349-8c74-02d0e8cddf9a",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "a873cd16-caf6-4349-8c74-02d0e8cddf9a"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-9"
+[1641222379032] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.7645999998785555
+    reqId: "req-9"
+[1641222379035] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/a873cd16-caf6-4349-8c74-02d0e8cddf9a",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "a873cd16-caf6-4349-8c74-02d0e8cddf9a"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-a"
+[1641222379035] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.4794000000692904
+    reqId: "req-a"
+[1641222379038] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-b"
+[1641222379038] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.500800000037998
+    reqId: "req-b"
+[1641222379041] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/7dc9e900-8a26-4c5b-b0ac-a4adf68e6d12",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "7dc9e900-8a26-4c5b-b0ac-a4adf68e6d12"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-c"
+[1641222379041] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.40350000001490116
+    reqId: "req-c"
+[1641222379044] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-d"
+[1641222379046] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.199599999934435
+    reqId: "req-d"
+[1641222379050] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-e"
+[1641222379052] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.534599999897182
+    reqId: "req-e"
+[1641222379055] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/6217ebd1-9d27-40d0-9d77-f2281b0928fa/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "6217ebd1-9d27-40d0-9d77-f2281b0928fa"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "154",
+        "connection": "close"
+      }
+    }
+    reqId: "req-f"
+[1641222379057] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.694300000090152
+    reqId: "req-f"
+[1641222379058] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/6217ebd1-9d27-40d0-9d77-f2281b0928fa/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "6217ebd1-9d27-40d0-9d77-f2281b0928fa"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "154",
+        "connection": "close"
+      }
+    }
+    reqId: "req-g"
+[1641222379058] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.6004000003449619
+    reqId: "req-g"
+[1641222379060] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/37ecabc7-f297-4e5a-99ea-71f058bbe155",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "37ecabc7-f297-4e5a-99ea-71f058bbe155"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-h"
+[1641222379061] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.46909999987110496
+    reqId: "req-h"
+[1641222379065] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/6217ebd1-9d27-40d0-9d77-f2281b0928fa/tasks/520780c5-23ec-41f0-8b0b-38c42689a7e7",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "6217ebd1-9d27-40d0-9d77-f2281b0928fa",
+        "taskId": "520780c5-23ec-41f0-8b0b-38c42689a7e7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-i"
+[1641222379067] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.475799999665469
+    reqId: "req-i"
+[1641222379069] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/6217ebd1-9d27-40d0-9d77-f2281b0928fa/tasks/29566f8c-3847-4e45-8880-dbfd205d4315",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "6217ebd1-9d27-40d0-9d77-f2281b0928fa",
+        "taskId": "29566f8c-3847-4e45-8880-dbfd205d4315"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-j"
+[1641222379069] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.39360000006854534
+    reqId: "req-j"
+[1641222379072] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/6217ebd1-9d27-40d0-9d77-f2281b0928fa/tasks/520780c5-23ec-41f0-8b0b-38c42689a7e7",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "6217ebd1-9d27-40d0-9d77-f2281b0928fa",
+        "taskId": "520780c5-23ec-41f0-8b0b-38c42689a7e7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-k"
+[1641222379073] [31mERROR[39m (2924 on macbaren): [36mCannot read properties of null (reading 'title')[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/6217ebd1-9d27-40d0-9d77-f2281b0928fa/tasks/520780c5-23ec-41f0-8b0b-38c42689a7e7",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "6217ebd1-9d27-40d0-9d77-f2281b0928fa",
+        "taskId": "520780c5-23ec-41f0-8b0b-38c42689a7e7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    res: {
+      "statusCode": 500
+    }
+    reqId: "req-k"
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of null (reading 'title')",
+      "stack":
+          TypeError: Cannot read properties of null (reading 'title')
+              at new Task (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.model.ts:35:29)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:85:19
+              at Generator.next (<anonymous>)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:8:71
+              at new Promise (<anonymous>)
+              at __awaiter (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:4:12)
+              at Object.deleteTask (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:83:5)
+              at preHandlerCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:126:28)
+              at preValidationCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:109:5)
+              at handler (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:72:7)
+    }
+[1641222379084] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 11.92519999993965
+    reqId: "req-k"
+[1641222379084] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/6217ebd1-9d27-40d0-9d77-f2281b0928fa/tasks/29566f8c-3847-4e45-8880-dbfd205d4315",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "6217ebd1-9d27-40d0-9d77-f2281b0928fa",
+        "taskId": "29566f8c-3847-4e45-8880-dbfd205d4315"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-l"
+[1641222379085] [31mERROR[39m (2924 on macbaren): [36mCannot read properties of null (reading 'title')[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/6217ebd1-9d27-40d0-9d77-f2281b0928fa/tasks/29566f8c-3847-4e45-8880-dbfd205d4315",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "6217ebd1-9d27-40d0-9d77-f2281b0928fa",
+        "taskId": "29566f8c-3847-4e45-8880-dbfd205d4315"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    res: {
+      "statusCode": 500
+    }
+    reqId: "req-l"
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of null (reading 'title')",
+      "stack":
+          TypeError: Cannot read properties of null (reading 'title')
+              at new Task (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.model.ts:35:29)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:85:19
+              at Generator.next (<anonymous>)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:8:71
+              at new Promise (<anonymous>)
+              at __awaiter (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:4:12)
+              at Object.deleteTask (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:83:5)
+              at preHandlerCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:126:28)
+              at preValidationCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:109:5)
+              at handler (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:72:7)
+    }
+[1641222379087] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 2.039300000295043
+    reqId: "req-l"
+[1641222379316] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-m"
+[1641222379317] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.7426999998278916
+    reqId: "req-m"
+[1641222379320] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "108",
+        "connection": "close"
+      }
+    }
+    reqId: "req-n"
+[1641222379321] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.610700000077486
+    reqId: "req-n"
+[1641222379337] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-o"
+[1641222379338] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.5773999998345971
+    reqId: "req-o"
+[1641222379354] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-p"
+[1641222379355] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.6752999997697771
+    reqId: "req-p"
+[1641222379357] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks/3cddff02-b203-42c3-bf9b-2184e86e6e95",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+        "taskId": "3cddff02-b203-42c3-bf9b-2184e86e6e95"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-q"
+[1641222379358] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.3807000000961125
+    reqId: "req-q"
+[1641222379363] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "108",
+        "connection": "close"
+      }
+    }
+    reqId: "req-r"
+[1641222379364] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.1561000002548099
+    reqId: "req-r"
+[1641222379367] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks/beb299af-176f-480f-a728-8311a29fbe19",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+        "taskId": "beb299af-176f-480f-a728-8311a29fbe19"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-s"
+[1641222379367] [31mERROR[39m (2924 on macbaren): [36mCannot read properties of null (reading 'title')[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks/beb299af-176f-480f-a728-8311a29fbe19",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+        "taskId": "beb299af-176f-480f-a728-8311a29fbe19"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    res: {
+      "statusCode": 500
+    }
+    reqId: "req-s"
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of null (reading 'title')",
+      "stack":
+          TypeError: Cannot read properties of null (reading 'title')
+              at new Task (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.model.ts:35:29)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:85:19
+              at Generator.next (<anonymous>)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:8:71
+              at new Promise (<anonymous>)
+              at __awaiter (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:4:12)
+              at Object.deleteTask (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:83:5)
+              at preHandlerCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:126:28)
+              at preValidationCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:109:5)
+              at handler (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:72:7)
+    }
+[1641222379369] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 1.6480000000447035
+    reqId: "req-s"
+[1641222379374] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "108",
+        "connection": "close"
+      }
+    }
+    reqId: "req-t"
+[1641222379377] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 2.4687999999150634
+    reqId: "req-t"
+[1641222379381] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "PUT",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks/56743982-d51e-4c3c-b359-8fca414070ca",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+        "taskId": "56743982-d51e-4c3c-b359-8fca414070ca"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "194",
+        "connection": "close"
+      }
+    }
+    reqId: "req-u"
+[1641222379385] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 3.5589999998919666
+    reqId: "req-u"
+[1641222379388] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks/56743982-d51e-4c3c-b359-8fca414070ca",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+        "taskId": "56743982-d51e-4c3c-b359-8fca414070ca"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-v"
+[1641222379388] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.4739999999292195
+    reqId: "req-v"
+[1641222379392] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks/3cddff02-b203-42c3-bf9b-2184e86e6e95",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+        "taskId": "3cddff02-b203-42c3-bf9b-2184e86e6e95"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-w"
+[1641222379393] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.5911999996751547
+    reqId: "req-w"
+[1641222379396] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks/3cddff02-b203-42c3-bf9b-2184e86e6e95",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+        "taskId": "3cddff02-b203-42c3-bf9b-2184e86e6e95"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-x"
+[1641222379396] [31mERROR[39m (2924 on macbaren): [36mCannot read properties of null (reading 'title')[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7/tasks/3cddff02-b203-42c3-bf9b-2184e86e6e95",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+        "taskId": "3cddff02-b203-42c3-bf9b-2184e86e6e95"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    res: {
+      "statusCode": 500
+    }
+    reqId: "req-x"
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of null (reading 'title')",
+      "stack":
+          TypeError: Cannot read properties of null (reading 'title')
+              at new Task (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.model.ts:35:29)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:85:19
+              at Generator.next (<anonymous>)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:8:71
+              at new Promise (<anonymous>)
+              at __awaiter (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:4:12)
+              at Object.deleteTask (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:83:5)
+              at preHandlerCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:126:28)
+              at preValidationCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:109:5)
+              at handler (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:72:7)
+    }
+[1641222379398] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 1.8325999998487532
+    reqId: "req-x"
+[1641222379407] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/bbbb74de-0576-40ef-a009-50fa9d4dbdd7",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "bbbb74de-0576-40ef-a009-50fa9d4dbdd7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-y"
+[1641222379408] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.8468000004068017
+    reqId: "req-y"
+[1641222379777] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-z"
+[1641222379779] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.050400000065565
+    reqId: "req-z"
+[1641222379809] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-10"
+[1641222379811] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.6332000000402331
+    reqId: "req-10"
+[1641222379827] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-11"
+[1641222379827] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.41039999993517995
+    reqId: "req-11"
+[1641222379838] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/47f4d41b-29fc-4809-ab33-0c462552e441",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "47f4d41b-29fc-4809-ab33-0c462552e441"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-12"
+[1641222379839] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.8201999999582767
+    reqId: "req-12"
+[1641222379843] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-13"
+[1641222379844] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.34620000002905726
+    reqId: "req-13"
+[1641222379849] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/55e15cfd-ba65-406d-9025-273a8de88922",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "55e15cfd-ba65-406d-9025-273a8de88922"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-14"
+[1641222379850] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.4576000003144145
+    reqId: "req-14"
+[1641222379852] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-15"
+[1641222379853] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.3913000002503395
+    reqId: "req-15"
+[1641222379856] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "PUT",
+      "url": "/boards/d38ceb26-08ee-4aad-b287-bfa4676b8399",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "d38ceb26-08ee-4aad-b287-bfa4676b8399"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "149",
+        "connection": "close"
+      }
+    }
+    reqId: "req-16"
+[1641222379858] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.6949000000022352
+    reqId: "req-16"
+[1641222379861] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/d38ceb26-08ee-4aad-b287-bfa4676b8399",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "d38ceb26-08ee-4aad-b287-bfa4676b8399"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-17"
+[1641222379861] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.42769999988377094
+    reqId: "req-17"
+[1641222379865] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/d38ceb26-08ee-4aad-b287-bfa4676b8399",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "d38ceb26-08ee-4aad-b287-bfa4676b8399"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-18"
+[1641222379866] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.49509999994188547
+    reqId: "req-18"
+[1641222379875] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-19"
+[1641222379875] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.48619999969378114
+    reqId: "req-19"
+[1641222379877] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/ba7665da-a409-4fc9-b0f6-b4f9d7a9151e",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "ba7665da-a409-4fc9-b0f6-b4f9d7a9151e"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1a"
+[1641222379878] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.2864000000990927
+    reqId: "req-1a"
+[1641222379882] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/ba7665da-a409-4fc9-b0f6-b4f9d7a9151e",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "ba7665da-a409-4fc9-b0f6-b4f9d7a9151e"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1b"
+[1641222379883] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.31620000023394823
+    reqId: "req-1b"
+[1641222379887] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1c"
+[1641222379891] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 3.369799999985844
+    reqId: "req-1c"
+[1641222379904] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1d"
+[1641222379905] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.4583999998867512
+    reqId: "req-1d"
+[1641222379905] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1e"
+[1641222379906] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.39289999986067414
+    reqId: "req-1e"
+[1641222379906] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1f"
+[1641222379907] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.39100000029429793
+    reqId: "req-1f"
+[1641222379907] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1g"
+[1641222379908] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.3695000000298023
+    reqId: "req-1g"
+[1641222379908] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1h"
+[1641222379909] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.5692000002600253
+    reqId: "req-1h"
+[1641222379920] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/a636a5ee-f6a3-49ba-8555-f3720fc09159",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "a636a5ee-f6a3-49ba-8555-f3720fc09159"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1i"
+[1641222379921] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.4708000002428889
+    reqId: "req-1i"
+[1641222379922] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/d78d88c3-44b3-41cd-b94c-636a7d253fdb",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "d78d88c3-44b3-41cd-b94c-636a7d253fdb"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1j"
+[1641222379922] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.3331000003963709
+    reqId: "req-1j"
+[1641222379922] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/48380b51-5434-48ac-b910-07a7ed64695b",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "48380b51-5434-48ac-b910-07a7ed64695b"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1k"
+[1641222379923] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.3013999997638166
+    reqId: "req-1k"
+[1641222379923] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/8e023bb5-0064-4870-963b-327158604441",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "8e023bb5-0064-4870-963b-327158604441"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1l"
+[1641222379924] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.30740000028163195
+    reqId: "req-1l"
+[1641222379924] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/44187afb-0561-4e61-9892-ac49b1e81c53",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "44187afb-0561-4e61-9892-ac49b1e81c53"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1m"
+[1641222379924] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.2388999997638166
+    reqId: "req-1m"
+[1641222379927] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1n"
+[1641222379927] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.549000000115484
+    reqId: "req-1n"
+[1641222379934] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/a636a5ee-f6a3-49ba-8555-f3720fc09159",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "a636a5ee-f6a3-49ba-8555-f3720fc09159"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1o"
+[1641222379934] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.25490000005811453
+    reqId: "req-1o"
+[1641222379934] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/d78d88c3-44b3-41cd-b94c-636a7d253fdb",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "d78d88c3-44b3-41cd-b94c-636a7d253fdb"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1p"
+[1641222379935] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.2236999999731779
+    reqId: "req-1p"
+[1641222379935] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/48380b51-5434-48ac-b910-07a7ed64695b",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "48380b51-5434-48ac-b910-07a7ed64695b"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1q"
+[1641222379936] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.23620000015944242
+    reqId: "req-1q"
+[1641222379936] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/8e023bb5-0064-4870-963b-327158604441",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "8e023bb5-0064-4870-963b-327158604441"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1r"
+[1641222379936] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.2360000000335276
+    reqId: "req-1r"
+[1641222379936] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/fa138dbd-12da-479b-868f-81846c80aab9/tasks/44187afb-0561-4e61-9892-ac49b1e81c53",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "fa138dbd-12da-479b-868f-81846c80aab9",
+        "taskId": "44187afb-0561-4e61-9892-ac49b1e81c53"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1s"
+[1641222379937] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.22170000011101365
+    reqId: "req-1s"
+[1641222379940] [32mINFO[39m (2924 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/47f4d41b-29fc-4809-ab33-0c462552e441",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "47f4d41b-29fc-4809-ab33-0c462552e441"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1t"
+[1641222379941] [32mINFO[39m (2924 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.2956999996677041
+    reqId: "req-1t"
+[1641222404976] [32mINFO[39m (4720 on macbaren): [36mServer listening at http://127.0.0.1:4000[39m
+[1641222467424] [32mINFO[39m (11028 on macbaren): [36mServer listening at http://127.0.0.1:4000[39m
+[1641222473446] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1"
+[1641222473452] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 4.539900000207126
+    reqId: "req-1"
+[1641222473465] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-2"
+[1641222473468] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 2.769599999766797
+    reqId: "req-2"
+[1641222473470] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/users/f943bc14-c15c-4aca-8bf4-a0a4abb05e6b",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "f943bc14-c15c-4aca-8bf4-a0a4abb05e6b"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-3"
+[1641222473472] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.8872999995946884
+    reqId: "req-3"
+[1641222473475] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/f943bc14-c15c-4aca-8bf4-a0a4abb05e6b",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "f943bc14-c15c-4aca-8bf4-a0a4abb05e6b"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-4"
+[1641222473476] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.9415000001899898
+    reqId: "req-4"
+[1641222473481] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-5"
+[1641222473483] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 2.0002999999560416
+    reqId: "req-5"
+[1641222473487] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/9cedebe3-2f32-42f2-9060-0bfcd28bc531",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "9cedebe3-2f32-42f2-9060-0bfcd28bc531"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-6"
+[1641222473488] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.2360000000335276
+    reqId: "req-6"
+[1641222473492] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-7"
+[1641222473493] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.8076999997720122
+    reqId: "req-7"
+[1641222473497] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "PUT",
+      "url": "/users/6b28b131-42fd-4fd4-a8d2-f5c8d82d83fc",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "6b28b131-42fd-4fd4-a8d2-f5c8d82d83fc"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "128",
+        "connection": "close"
+      }
+    }
+    reqId: "req-8"
+[1641222473498] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.7683000001125038
+    reqId: "req-8"
+[1641222473501] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/users/6b28b131-42fd-4fd4-a8d2-f5c8d82d83fc",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "6b28b131-42fd-4fd4-a8d2-f5c8d82d83fc"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-9"
+[1641222473501] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.48940000031143427
+    reqId: "req-9"
+[1641222473504] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/6b28b131-42fd-4fd4-a8d2-f5c8d82d83fc",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "6b28b131-42fd-4fd4-a8d2-f5c8d82d83fc"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-a"
+[1641222473504] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.4599999999627471
+    reqId: "req-a"
+[1641222473508] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-b"
+[1641222473510] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.2790000000968575
+    reqId: "req-b"
+[1641222473512] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/a2a4a221-d800-4206-8322-5cbe3d29d595",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "a2a4a221-d800-4206-8322-5cbe3d29d595"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-c"
+[1641222473512] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.40660000033676624
+    reqId: "req-c"
+[1641222473516] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/users",
+      "path": "/users",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "67",
+        "connection": "close"
+      }
+    }
+    reqId: "req-d"
+[1641222473516] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.6143000000156462
+    reqId: "req-d"
+[1641222473519] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-e"
+[1641222473520] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.5605999999679625
+    reqId: "req-e"
+[1641222473526] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "154",
+        "connection": "close"
+      }
+    }
+    reqId: "req-f"
+[1641222473528] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.7203999999910593
+    reqId: "req-f"
+[1641222473528] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "154",
+        "connection": "close"
+      }
+    }
+    reqId: "req-g"
+[1641222473529] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.7850999999791384
+    reqId: "req-g"
+[1641222473531] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/users/3e5c5113-40ae-4ac1-a3e4-79872af11830",
+      "path": "/users/:userId",
+      "parameters": {
+        "userId": "3e5c5113-40ae-4ac1-a3e4-79872af11830"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-h"
+[1641222473531] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.4801999996416271
+    reqId: "req-h"
+[1641222473534] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d/tasks/22a99655-5c97-42fa-82d0-6c268db70af9",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d",
+        "taskId": "22a99655-5c97-42fa-82d0-6c268db70af9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-i"
+[1641222473535] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.8637000001035631
+    reqId: "req-i"
+[1641222473537] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d/tasks/28769ed4-6fd7-43cd-bf25-0fe366302d77",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d",
+        "taskId": "28769ed4-6fd7-43cd-bf25-0fe366302d77"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-j"
+[1641222473537] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.38269999995827675
+    reqId: "req-j"
+[1641222473540] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d/tasks/28769ed4-6fd7-43cd-bf25-0fe366302d77",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d",
+        "taskId": "28769ed4-6fd7-43cd-bf25-0fe366302d77"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-k"
+[1641222473542] [31mERROR[39m (11028 on macbaren): [36mCannot read properties of null (reading 'title')[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d/tasks/28769ed4-6fd7-43cd-bf25-0fe366302d77",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d",
+        "taskId": "28769ed4-6fd7-43cd-bf25-0fe366302d77"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    res: {
+      "statusCode": 500
+    }
+    reqId: "req-k"
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of null (reading 'title')",
+      "stack":
+          TypeError: Cannot read properties of null (reading 'title')
+              at new Task (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.model.ts:35:29)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:85:19
+              at Generator.next (<anonymous>)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:8:71
+              at new Promise (<anonymous>)
+              at __awaiter (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:4:12)
+              at Object.deleteTask (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:83:5)
+              at preHandlerCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:126:28)
+              at preValidationCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:109:5)
+              at handler (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:72:7)
+    }
+[1641222473553] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 12.173200000077486
+    reqId: "req-k"
+[1641222473553] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d/tasks/22a99655-5c97-42fa-82d0-6c268db70af9",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d",
+        "taskId": "22a99655-5c97-42fa-82d0-6c268db70af9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-l"
+[1641222473554] [31mERROR[39m (11028 on macbaren): [36mCannot read properties of null (reading 'title')[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d/tasks/22a99655-5c97-42fa-82d0-6c268db70af9",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "02c9dac8-e4ee-41a9-92b4-bc3a2a215a4d",
+        "taskId": "22a99655-5c97-42fa-82d0-6c268db70af9"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    res: {
+      "statusCode": 500
+    }
+    reqId: "req-l"
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of null (reading 'title')",
+      "stack":
+          TypeError: Cannot read properties of null (reading 'title')
+              at new Task (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.model.ts:35:29)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:85:19
+              at Generator.next (<anonymous>)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:8:71
+              at new Promise (<anonymous>)
+              at __awaiter (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:4:12)
+              at Object.deleteTask (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:83:5)
+              at preHandlerCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:126:28)
+              at preValidationCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:109:5)
+              at handler (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:72:7)
+    }
+[1641222473556] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 2.1908999998122454
+    reqId: "req-l"
+[1641222473785] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-m"
+[1641222473785] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.5951000000350177
+    reqId: "req-m"
+[1641222473788] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "108",
+        "connection": "close"
+      }
+    }
+    reqId: "req-n"
+[1641222473789] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.5372999999672174
+    reqId: "req-n"
+[1641222473803] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-o"
+[1641222473804] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.49369999999180436
+    reqId: "req-o"
+[1641222473816] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-p"
+[1641222473817] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.389400000218302
+    reqId: "req-p"
+[1641222473819] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks/0a7f7e15-f239-4862-90e5-86375d19e8a4",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22",
+        "taskId": "0a7f7e15-f239-4862-90e5-86375d19e8a4"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-q"
+[1641222473819] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.23239999962970614
+    reqId: "req-q"
+[1641222473824] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "108",
+        "connection": "close"
+      }
+    }
+    reqId: "req-r"
+[1641222473825] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.7766999998129904
+    reqId: "req-r"
+[1641222473828] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks/e346fc15-e4bc-46e4-afb7-62865ac41009",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22",
+        "taskId": "e346fc15-e4bc-46e4-afb7-62865ac41009"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-s"
+[1641222473828] [31mERROR[39m (11028 on macbaren): [36mCannot read properties of null (reading 'title')[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks/e346fc15-e4bc-46e4-afb7-62865ac41009",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22",
+        "taskId": "e346fc15-e4bc-46e4-afb7-62865ac41009"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    res: {
+      "statusCode": 500
+    }
+    reqId: "req-s"
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of null (reading 'title')",
+      "stack":
+          TypeError: Cannot read properties of null (reading 'title')
+              at new Task (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.model.ts:35:29)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:85:19
+              at Generator.next (<anonymous>)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:8:71
+              at new Promise (<anonymous>)
+              at __awaiter (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:4:12)
+              at Object.deleteTask (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:83:5)
+              at preHandlerCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:126:28)
+              at preValidationCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:109:5)
+              at handler (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:72:7)
+    }
+[1641222473830] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 1.6696999999694526
+    reqId: "req-s"
+[1641222473835] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "108",
+        "connection": "close"
+      }
+    }
+    reqId: "req-t"
+[1641222473837] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 1.9092999999411404
+    reqId: "req-t"
+[1641222473842] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "PUT",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks/390b2762-8486-4299-9f34-34c3c52eeb2a",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22",
+        "taskId": "390b2762-8486-4299-9f34-34c3c52eeb2a"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "194",
+        "connection": "close"
+      }
+    }
+    reqId: "req-u"
+[1641222473844] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.7103999997489154
+    reqId: "req-u"
+[1641222473847] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks/390b2762-8486-4299-9f34-34c3c52eeb2a",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22",
+        "taskId": "390b2762-8486-4299-9f34-34c3c52eeb2a"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-v"
+[1641222473849] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.5334000000730157
+    reqId: "req-v"
+[1641222473853] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks/0a7f7e15-f239-4862-90e5-86375d19e8a4",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22",
+        "taskId": "0a7f7e15-f239-4862-90e5-86375d19e8a4"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-w"
+[1641222473853] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.5519999996758997
+    reqId: "req-w"
+[1641222473855] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks/0a7f7e15-f239-4862-90e5-86375d19e8a4",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22",
+        "taskId": "0a7f7e15-f239-4862-90e5-86375d19e8a4"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-x"
+[1641222473856] [31mERROR[39m (11028 on macbaren): [36mCannot read properties of null (reading 'title')[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22/tasks/0a7f7e15-f239-4862-90e5-86375d19e8a4",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22",
+        "taskId": "0a7f7e15-f239-4862-90e5-86375d19e8a4"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    res: {
+      "statusCode": 500
+    }
+    reqId: "req-x"
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of null (reading 'title')",
+      "stack":
+          TypeError: Cannot read properties of null (reading 'title')
+              at new Task (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.model.ts:35:29)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:85:19
+              at Generator.next (<anonymous>)
+              at D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:8:71
+              at new Promise (<anonymous>)
+              at __awaiter (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:4:12)
+              at Object.deleteTask (D:\JSprojects\rs\nodejs2021Q4-service\src\resources\tasks\tasks.service.ts:83:5)
+              at preHandlerCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:126:28)
+              at preValidationCallback (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:109:5)
+              at handler (D:\JSprojects\rs\nodejs2021Q4-service\node_modules\fastify\lib\handleRequest.js:72:7)
+    }
+[1641222473858] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 2.6387999998405576
+    reqId: "req-x"
+[1641222473866] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/ff5e63dc-72aa-4b67-8efc-24cce380db22",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "ff5e63dc-72aa-4b67-8efc-24cce380db22"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-y"
+[1641222473867] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.7000000001862645
+    reqId: "req-y"
+[1641222474210] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-z"
+[1641222474211] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.7716000000946224
+    reqId: "req-z"
+[1641222474242] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-10"
+[1641222474242] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.3755000000819564
+    reqId: "req-10"
+[1641222474254] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-11"
+[1641222474255] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.3053999999538064
+    reqId: "req-11"
+[1641222474258] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/c80d7ebc-4b34-4019-816b-70e468e03b04",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "c80d7ebc-4b34-4019-816b-70e468e03b04"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-12"
+[1641222474260] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.2939999997615814
+    reqId: "req-12"
+[1641222474267] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-13"
+[1641222474268] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.39050000021234155
+    reqId: "req-13"
+[1641222474270] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/e66308ac-4019-465b-8d54-3b46e1402866",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "e66308ac-4019-465b-8d54-3b46e1402866"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-14"
+[1641222474271] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.385600000154227
+    reqId: "req-14"
+[1641222474275] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-15"
+[1641222474275] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.344200000166893
+    reqId: "req-15"
+[1641222474278] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "PUT",
+      "url": "/boards/c4d399bc-43da-4bd0-bc21-74cf282bcba6",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "c4d399bc-43da-4bd0-bc21-74cf282bcba6"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "149",
+        "connection": "close"
+      }
+    }
+    reqId: "req-16"
+[1641222474280] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 1.6680999998934567
+    reqId: "req-16"
+[1641222474284] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/c4d399bc-43da-4bd0-bc21-74cf282bcba6",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "c4d399bc-43da-4bd0-bc21-74cf282bcba6"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-17"
+[1641222474284] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.2907999996095896
+    reqId: "req-17"
+[1641222474287] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/c4d399bc-43da-4bd0-bc21-74cf282bcba6",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "c4d399bc-43da-4bd0-bc21-74cf282bcba6"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-18"
+[1641222474287] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.2343999999575317
+    reqId: "req-18"
+[1641222474291] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-19"
+[1641222474292] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.38219999987632036
+    reqId: "req-19"
+[1641222474295] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/c5c87ac8-8ece-4b07-96b7-42893f5a0b64",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "c5c87ac8-8ece-4b07-96b7-42893f5a0b64"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1a"
+[1641222474295] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.28449999960139394
+    reqId: "req-1a"
+[1641222474298] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/c5c87ac8-8ece-4b07-96b7-42893f5a0b64",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "c5c87ac8-8ece-4b07-96b7-42893f5a0b64"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1b"
+[1641222474299] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.2755999998189509
+    reqId: "req-1b"
+[1641222474302] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards",
+      "path": "/boards",
+      "parameters": {},
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "content-type": "application/json",
+        "content-length": "97",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1c"
+[1641222474303] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.5206999997608364
+    reqId: "req-1c"
+[1641222474312] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1d"
+[1641222474312] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.46939999982714653
+    reqId: "req-1d"
+[1641222474313] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1e"
+[1641222474313] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.3603999996557832
+    reqId: "req-1e"
+[1641222474314] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1f"
+[1641222474314] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.35829999996349216
+    reqId: "req-1f"
+[1641222474314] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1g"
+[1641222474315] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.35450000036507845
+    reqId: "req-1g"
+[1641222474315] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "POST",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks",
+      "path": "/boards/:boardId/tasks",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json",
+        "accept": "application/json",
+        "content-length": "136",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1h"
+[1641222474316] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 201
+    }
+    responseTime: 0.5618000002577901
+    reqId: "req-1h"
+[1641222474321] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/2ac7371a-9de6-4c1b-8285-4fed4ee566ea",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "2ac7371a-9de6-4c1b-8285-4fed4ee566ea"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1i"
+[1641222474322] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.5035000001080334
+    reqId: "req-1i"
+[1641222474322] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/cd72696b-789a-4987-b79a-5d9b8d5b76f7",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "cd72696b-789a-4987-b79a-5d9b8d5b76f7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1j"
+[1641222474323] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.46889999974519014
+    reqId: "req-1j"
+[1641222474323] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/e74b9daa-a6da-4cb6-be12-f33e452ac827",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "e74b9daa-a6da-4cb6-be12-f33e452ac827"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1k"
+[1641222474324] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.2442999999038875
+    reqId: "req-1k"
+[1641222474324] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/641bb74e-b3f0-4291-b4fb-4acfbfdee9f6",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "641bb74e-b3f0-4291-b4fb-4acfbfdee9f6"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1l"
+[1641222474325] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.24469999969005585
+    reqId: "req-1l"
+[1641222474325] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/281ef07d-4e40-4765-ae10-fefcaaf2c98d",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "281ef07d-4e40-4765-ae10-fefcaaf2c98d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "accept": "application/json",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1m"
+[1641222474325] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 0.1872999998740852
+    reqId: "req-1m"
+[1641222474327] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1n"
+[1641222474328] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.49350000033155084
+    reqId: "req-1n"
+[1641222474333] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/2ac7371a-9de6-4c1b-8285-4fed4ee566ea",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "2ac7371a-9de6-4c1b-8285-4fed4ee566ea"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1o"
+[1641222474334] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.3645999999716878
+    reqId: "req-1o"
+[1641222474334] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/cd72696b-789a-4987-b79a-5d9b8d5b76f7",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "cd72696b-789a-4987-b79a-5d9b8d5b76f7"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1p"
+[1641222474334] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.22669999999925494
+    reqId: "req-1p"
+[1641222474334] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/e74b9daa-a6da-4cb6-be12-f33e452ac827",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "e74b9daa-a6da-4cb6-be12-f33e452ac827"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1q"
+[1641222474335] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.21409999998286366
+    reqId: "req-1q"
+[1641222474335] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/641bb74e-b3f0-4291-b4fb-4acfbfdee9f6",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "641bb74e-b3f0-4291-b4fb-4acfbfdee9f6"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1r"
+[1641222474335] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.17200000025331974
+    reqId: "req-1r"
+[1641222474335] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "GET",
+      "url": "/boards/60d23af6-a53a-4732-b620-29d055218b1d/tasks/281ef07d-4e40-4765-ae10-fefcaaf2c98d",
+      "path": "/boards/:boardId/tasks/:taskId",
+      "parameters": {
+        "boardId": "60d23af6-a53a-4732-b620-29d055218b1d",
+        "taskId": "281ef07d-4e40-4765-ae10-fefcaaf2c98d"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1s"
+[1641222474336] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 0.16969999996945262
+    reqId: "req-1s"
+[1641222474338] [32mINFO[39m (11028 on macbaren): [36mincoming request[39m
+    req: {
+      "method": "DELETE",
+      "url": "/boards/c80d7ebc-4b34-4019-816b-70e468e03b04",
+      "path": "/boards/:boardId",
+      "parameters": {
+        "boardId": "c80d7ebc-4b34-4019-816b-70e468e03b04"
+      },
+      "headers": {
+        "host": "localhost:4000",
+        "accept-encoding": "gzip, deflate",
+        "connection": "close"
+      }
+    }
+    reqId: "req-1t"
+[1641222474339] [32mINFO[39m (11028 on macbaren): [36mrequest completed[39m
+    res: {
+      "statusCode": 204
+    }
+    responseTime: 0.4918999997898936
+    reqId: "req-1t"
+[1641222531748] [32mINFO[39m (9740 on macbaren): [36mServer listening at http://127.0.0.1:4000[39m
+[1641735336763] [32mINFO[39m (6692 on macbaren): [36mServer listening at http://127.0.0.1:4000[39m
